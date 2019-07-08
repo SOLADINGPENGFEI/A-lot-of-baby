@@ -2,7 +2,8 @@ import { carouse } from '@/server';
 const state = {
     dapaiData: {},
     summerData: {},
-    babytryData:{}
+    babytryData:{},
+    eggData:{}
 }
 
 const getters = {
@@ -26,6 +27,11 @@ const mutations = {
     upBabytryData(state, payload) {
         state.babytryData = payload.result
         console.log("state.babytryData", state.babytryData)
+    },
+     //宝宝蛋专场
+     upEggData(state, payload) {
+        state.eggData = payload.result
+        console.log("state.eggData", state.eggData)
     }
 }
 
@@ -41,10 +47,15 @@ const actions = {
         const data = await carouse(payload)
         commit("upSummerData", data)
     },
-     ////babytry专场数据
+    //babytry专场数据
      async getBabytryData({ commit }, payload) {
         const data = await carouse(payload)
         commit("upBabytryData", data)
+    },
+    //宝宝蛋专场数据
+     async getEggData({ commit }, payload) {
+        const data = await carouse(payload)
+        commit("upEggData", data)
     },
 }
 

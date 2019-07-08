@@ -39,6 +39,11 @@ page,.container {
   justify-content: space-between;
   box-sizing: border-box;
 }
+image {
+  display:inline-block;
+  overflow:hidden;
+
+}
 /* this rule will be remove */
 * {
   transition: width 2s;

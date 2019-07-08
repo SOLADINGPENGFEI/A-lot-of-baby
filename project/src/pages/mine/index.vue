@@ -18,43 +18,35 @@
           <div class="order">
               <h3>我的订单</h3>
               <div class="order-status">
-                  <span>
-                      <image src="/static/images/dfk.png"></image>
-                      <p>待付款</p>
-                  </span>
-                  <span>
-                      <image src="/static/images/dfh.png"></image>
-                      <p>待发货</p>
-                  </span>
-                  <span>
-                      <image src="/static/images/dsh.png"></image>
-                      <p>待收货</p>
+                  <span @click="obligation(index)" v-for="(item,index) in navStatus" :key='index'>
+                      <image :src='item.img'></image>
+                      <p>{{item.txt}}</p>
                   </span>
               </div>
           </div>
           <ul class="list">
-              <li>
+              <li  @click="mycoupon">
                 <div class="title">
                     <image src="/static/images/yhj.png"></image>
                     <span>我的优惠卷</span>
                 </div>
                 <image src="/static/images/jt.png"></image>
               </li>
-              <li>
+              <li  @click="myaddress">
                 <div class="title">
                     <image src="/static/images/dz.png"></image>
                     <span>收货地址</span>
                 </div>
                 <image src="/static/images/jt.png"></image>
               </li>
-              <li>
-                <div class="title">
+              <li @click="services">
+                <div class="title" >
                     <image src="/static/images/kf.png"></image>
                     <span>联系客服</span>
                 </div>
                 <image src="/static/images/jt.png"></image>
               </li>
-              <li>
+              <li @click="authentication">
                 <div class="title">
                     <image src="/static/images/sm.png"></image>
                     <span>实名认证</span>
@@ -75,14 +67,42 @@ export default {
   },
   data(){
     return {
-
+      navStatus: [
+        { img:'/static/images/dfk.png',txt: '待付款'},
+        { img:'/static/images/dfh.png',txt: '待发货'},
+        { img:'/static/images/dsh.png',txt: '待收货'}
+      ]
     }
   },
   computed:{
 
   },
   methods:{
-
+      obligation(i) {
+        wx.navigateTo({
+          url:'/pages/obligation/main?index='+i
+        })
+      },
+      mycoupon() {
+        wx.navigateTo({
+          url: '/pages/coupon/main'
+        })
+      },
+      myaddress() {
+        wx.navigateTo({
+          url: '/pages/myaddress/main'
+        })
+      },
+      services() {
+        wx.navigateTo({
+          url: '/pages/CustomerService/main'
+        })
+      },
+      authentication() {
+        wx.navigateTo({
+          url: '/pages/realname/main'
+        })
+      }
   },
   created(){
 

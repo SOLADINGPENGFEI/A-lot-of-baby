@@ -12,10 +12,9 @@
          <div class="title"></div>   
         </div>
         
-        <div class="center" > 
-        <ul class="list" v-for="(item,i) in babytryData.anchors[0].products" :key="i">
-            <li>
-                <dl>
+      
+       <div class='dls'>
+                <dl v-for="(item,i) in babytryData.anchors[0].products" :key="i">
                     <dt><img :src="item.mainImgUrl" alt=""></dt>
                     <dd>
                         <div>{{item.title}}</div>
@@ -25,9 +24,8 @@
                         </div>
                     </dd>
                 </dl>
-            </li>
-        </ul>
-        </div>
+    
+     </div>
         
     </div>
 </template>
@@ -41,7 +39,7 @@ export default {
   components: {},
   data() {
     return {
-        navTypeIndex:0
+      navTypeIndex: 0
     };
   },
   computed: {
@@ -53,10 +51,9 @@ export default {
     ...mapActions({
       getBabytryData: "carouse/getBabytryData"
     }),
-    click(i){
-        this.navTypeIndex=i
-    },
-
+    click(i) {
+      this.navTypeIndex = i;
+    }
   },
 
   created() {
@@ -80,8 +77,8 @@ export default {
       height: 35px;
       padding: 15px 0 10px 10px;
     }
-    .active{
-        color:red;
+    .active {
+      color: red;
     }
   }
   img {
@@ -96,38 +93,35 @@ export default {
     font-size: 16px;
   }
 }
-.center {
-  .list {
-         display: flex;
-        flex-wrap: wrap;
-         padding: 0 10px;
-    li {
-         width: 33%;
-      height: 140px;
-     
-    
-      dl {
-         display: flex;
-        flex-direction: column;
-        dt{
-             img {
-          width: 120px;
-          height: 120px;
-          margin-right: 20px;
-        }
-        }
-       
-        dd {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          .price {
-            color: #fc5d7b;
-            display: flex;
-          }
-        }
-      }
-    }
-  }
+.dls{
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   flex-shrink: 0;
+   flex-wrap: wrap;
+   dl{
+       width:33.3%;
+       height: 220px;
+    //    text-align: center;
+
+       dt{
+           width: 120px;
+           height: 120px;
+           text-align: center;
+           img{
+              width: 120px;
+              height: 120px;
+              margin-left:3px;
+           }
+       }
+       dd{
+           font-size:12px;
+           color:#666;
+           padding:0 5px;
+           .price{
+               color:orange;
+           }
+       }
+   }
 }
 </style>

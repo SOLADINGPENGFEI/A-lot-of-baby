@@ -1,12 +1,12 @@
 <template>
-    <form class="newaddress" bindsubmit="formSubmit">
+    <form class="newaddress" @submit="formSubmit" report-submit>
         <div class="message">
             <div class="receiving">
-                <input type="text" placeholder="收货人">
+                <input type="text" placeholder="收货人" v-model="current.consignee">
                 <image src="/static/images/lt.svg"></image>
             </div>
             <div class="phone-number">
-                <input type="text" placeholder="手机号码">
+                <input type="text" placeholder="手机号码" v-model="current.consigneePhone">
                 <label>
                     <span>+ 86</span>
                     <image src="/static/images/lt.svg"></image>
@@ -17,12 +17,14 @@
                         @change="changeRegin" 
                         
                         >
-                    <input class="pikers" :value='region' placeholder="所在地区"/>
+                    <view>
+                        <input class="pikers"  v-model="region" placeholder="所在地区"/>
+                    </view>
                 </picker>
                 <image src="/static/images/lt.svg"></image>
             </div>
             <div class="detail-address">
-                <textarea name="" id="" cols="30" rows="10" 
+                <textarea name="" id="" cols="30" rows="10" v-model="current.address"
                 placeholder="详细地址:如道路、门牌号、小区、楼栋号、单元室等"></textarea>
             </div>
         </div>
@@ -36,14 +38,14 @@
             </div>
             <div class="default">
                 <span>设置默认地址</span>
-                <switch :checked="checked"  />
+                <switch :checked="checked" @change="stautsChange" />
             </div>
         </div>
         <button form-type="submit">保存</button>
     </form>
 </template>
 <script>
-
+import { mapState,mapMutations,mapActions} from 'vuex'
 export default {
     props:{
 
@@ -60,22 +62,70 @@ export default {
         }
     },
     computed:{
-
+        ...mapState({
+            current: state => state.index.current
+        })
     },
     methods:{
-        formSubmit: function(e) {
-            console.log(e.detail.value)
-        },
+        ...mapActions({
+            createNew: 'index/createNew'
+        }),
+        ...mapMutations({
+            updateState: 'index/updateState'
+        }),
         changeRegin(e) {
+            const {code,value} = e.mp.detail
+            console.log(code)
             console.log(e.target.value)
             this.region = e.target.value
+            this.current.provinceId = code[0]
+            this.current.cityId = code[1]
+            this.current.areaId = code[2]
+            this.current.provinceName = value[0]
+            this.current.cityName = value[1]
+            this.current.areaName = value[2]
         },
         pitch(index) {
             this.ind = index
+            this.current.addressTag = index
+        },
+        async formSubmit(e) {
+
+            // 判断收获人是否为空
+            if(!this.current.consignee) {
+                wx.showToast({
+                    title: '请输入收货人姓名', //提示的内容
+                    icon: 'none' //图标
+                })
+                return false
+            }
+             // 判断手机号是否符合规范
+            if(!/^1(3|4|5|7|8)\d{9}$/.test(this.current.consigneePhone) || !/^(\(\d{3,4}\)|\d{3,4}-|\s)?\d{7,14}$/.test(this.current.consigneePhone)) {
+                wx.showToast({
+                    title: '请输入手机或座机', //提示的内容
+                    icon: 'none'  //图标
+                })
+                return false
+            }
+            // 判断详细地址是否为空
+            if(!this.current.address) {
+                wx.showToast({
+                    title: '请输入详细的地址', //提示的内容
+                    icon: 'none' //图标
+                })
+                return false
+            }
+            let data = await this.createNew(this.current)
+            console.log('data...',data)
+        },
+        stautsChange() {
+            this.checked = !this.checked
+            if(this.checked) {
+                this.current.state = 0
+            } else {
+                this.current.state = 1
+            }
         }
-    },
-    checked() {
-        console.log(1)
     },
     created(){
 

@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/carouse/summer/main",
     "pages/carouse/dapai/main",
     "pages/index/main",
     

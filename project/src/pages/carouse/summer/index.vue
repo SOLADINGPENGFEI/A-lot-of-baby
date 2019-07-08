@@ -1,13 +1,18 @@
 <template>
-    <div class="dapai">
-        <!-- <Carouse :dapaiData="dapaiData"/> -->
+    <div class="summer">
+        <!-- <Carouse :summerData="dapaiData"/> -->
          <div class="header">
-            <img :src="dapaiData.specialImg" alt="">
-            <h2>{{dapaiData.anchors[0].anchorDesc}}</h2>
-         <div class="title">{{dapaiData.anchors[0].anchorName}}</div>   
+            <img :src="summerData.specialImg" alt="">
+            <div class="naveType">
+            <h2 :class="{active:index==navTypeIndex}"
+            v-for="(item,index) in summerData.anchors" :key="index"
+            @click="click(index)">{{item.anchorDesc}}</h2>
+
+            </div>
+         <div class="title"></div>   
         </div>
         
-        <div class="center" v-for="(item,i) in dapaiData.anchors[0].products" :key="i"> 
+        <div class="center" v-for="(item,i) in summerData.anchors[0].products" :key="i"> 
         <ul class="list">
             <li>
                 <dl>
@@ -35,41 +40,54 @@ import { mapState, mapActions } from "vuex";
 export default {
   components: {},
   data() {
-    return {};
+    return {
+        navTypeIndex:0
+    };
   },
   computed: {
-    ...mapState({ 
-        dapaiData: state => state.carouse.dapaiData ,
+    ...mapState({
+      summerData: state => state.carouse.summerData
     })
   },
   methods: {
     ...mapActions({
-      getDapaiData: "carouse/getDapaiData",
-    })
+      getSummerData: "carouse/getSummerData"
+    }),
+    click(i){
+        this.navTypeIndex=i
+    },
+
   },
- 
+
   created() {
     //   if(180){
-    //       this.getDapaiData(180);
+    //       this.getsummerData(180);
     //   }
-    this.getDapaiData(180);
-    //this.getDapaiData(180);
+    this.getSummerData(182);
+    //this.getsummerData(180);
   }
 };
 </script>
 <style lang="scss" scoped>
-.header {
+.summer {
   width: 100%;
   display: flex;
   flex-direction: column;
+  .naveType {
+    display: flex;
+    flex-wrap: nowrap;
+    h2 {
+      height: 40px;
+      padding: 15px 0 10px 10px;
+    }
+    .active{
+        color:red;
+    }
+  }
   img {
-    height: 400px;
+    height: 250px;
   }
-  h2 {
-    height: 40px;
-    color: red;
-    padding: 15px 0 10px 10px;
-  }
+
   .title {
     height: 75px;
     background: #f3f7f7;
@@ -92,18 +110,16 @@ export default {
           height: 120px;
           margin-right: 20px;
         }
-         dd {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        .price {
-          color: #FC5D7B;
+        dd {
           display: flex;
-          
+          flex-direction: column;
+          justify-content: center;
+          .price {
+            color: #fc5d7b;
+            display: flex;
+          }
         }
       }
-      }
-     
     }
   }
 }

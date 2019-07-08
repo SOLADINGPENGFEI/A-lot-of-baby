@@ -1,0 +1,646 @@
+{
+    "result": [
+        {
+            "pictHeight": null,
+            "pictUrl": null,
+            "type": "carouselImg",
+            "items": [
+                {
+                    "pid": 12943,
+                    "phid": 283,
+                    "pageType": 1,
+                    "title": "大牌化妆品小样专场",
+                    "contentType": 2,
+                    "contentValue": 180,
+                    "imgUrl": "https://jnup.oss-cn-beijing.aliyuncs.com/product/2defe8aa432c89162ce0251a69ef7d02.jpg",
+                    "imgWidth": 780,
+                    "imgHeight": 308,
+                    "uiType": 1,
+                    "state": 1,
+                    "sortId": 1,
+                    "createTime": 1555898098000,
+                    "updateTime": 1562547241000,
+                    "jumpUrl": "jinaup://contentValue=topic&businessId=180&uiType=1"
+                },
+                {
+                    "pid": 1336,
+                    "phid": 283,
+                    "pageType": 1,
+                    "title": "夏季出行专场",
+                    "contentType": 2,
+                    "contentValue": 182,
+                    "imgUrl": "https://jnup.oss-cn-beijing.aliyuncs.com/product/d86697416051ac31d0c91a7cd4cae65e.jpg",
+                    "imgWidth": 780,
+                    "imgHeight": 308,
+                    "uiType": 1,
+                    "state": 1,
+                    "sortId": 2,
+                    "createTime": 1552371967000,
+                    "updateTime": 1562547361000,
+                    "jumpUrl": "jinaup://contentValue=topic&businessId=182&uiType=1"
+                },
+                {
+                    "pid": 12894,
+                    "phid": 283,
+                    "pageType": 1,
+                    "title": "蓓臣Babytry专场",
+                    "contentType": 2,
+                    "contentValue": 186,
+                    "imgUrl": "https://jnup.oss-cn-beijing.aliyuncs.com/product/9ed292f334e1fd8a145ef5897b2e315d.jpg",
+                    "imgWidth": 3508,
+                    "imgHeight": 1385,
+                    "uiType": 1,
+                    "state": 1,
+                    "sortId": 3,
+                    "createTime": 1554997256000,
+                    "updateTime": 1562550816000,
+                    "jumpUrl": "jinaup://contentValue=topic&businessId=186&uiType=1"
+                },
+                {
+                    "pid": 1350,
+                    "phid": 283,
+                    "pageType": 1,
+                    "title": "宝宝蛋专场",
+                    "contentType": 2,
+                    "contentValue": 181,
+                    "imgUrl": "https://jnup.oss-cn-beijing.aliyuncs.com/product/df3587b37927f0c0f2105183fd9dba1d.jpg",
+                    "imgWidth": 780,
+                    "imgHeight": 308,
+                    "uiType": 1,
+                    "state": 1,
+                    "sortId": 3,
+                    "createTime": 1552639300000,
+                    "updateTime": 1562547337000,
+                    "jumpUrl": "jinaup://contentValue=topic&businessId=181&uiType=1"
+                }
+            ],
+            "pictWidth": null
+        },
+        {
+            "pictHeight": null,
+            "pictUrl": null,
+            "type": "adThree",
+            "items": [
+                {
+                    "pid": 1348,
+                    "phid": 294,
+                    "pageType": 4,
+                    "title": "会员中心",
+                    "contentType": 2,
+                    "contentValue": 1,
+                    "imgUrl": "https://jnup.oss-cn-beijing.aliyuncs.com/product/73b9906cea8612b23967553ef93c5c55.png",
+                    "imgWidth": 304,
+                    "imgHeight": 376,
+                    "uiType": 2,
+                    "state": 1,
+                    "sortId": 1,
+                    "createTime": 1552395261000,
+                    "updateTime": 1560681293000,
+                    "jumpUrl": "jinaup://contentValue=topic&businessId=1&uiType=2"
+                },
+                {
+                    "pid": 1347,
+                    "phid": 294,
+                    "pageType": 4,
+                    "title": "偏远地区包邮专场",
+                    "contentType": 2,
+                    "contentValue": 156,
+                    "imgUrl": "https://jnup.oss-cn-beijing.aliyuncs.com/product/daa273d3f039af3e622f7d2d09680552.png",
+                    "imgWidth": 472,
+                    "imgHeight": 186,
+                    "uiType": 1,
+                    "state": 1,
+                    "sortId": 2,
+                    "createTime": 1552395242000,
+                    "updateTime": 1560681313000,
+                    "jumpUrl": "jinaup://contentValue=topic&businessId=156&uiType=1"
+                },
+                {
+                    "pid": 13300,
+                    "phid": 294,
+                    "pageType": 4,
+                    "title": "南靖特产专场",
+                    "contentType": 2,
+                    "contentValue": 171,
+                    "imgUrl": "https://jnup.oss-cn-beijing.aliyuncs.com/product/695f4f58282831fe5d1967762032ad15.jpg",
+                    "imgWidth": 472,
+                    "imgHeight": 186,
+                    "uiType": 1,
+                    "state": 1,
+                    "sortId": 3,
+                    "createTime": 1560681330000,
+                    "updateTime": 1562547416000,
+                    "jumpUrl": "jinaup://contentValue=topic&businessId=171&uiType=1"
+                }
+            ],
+            "pictWidth": null
+        },
+        {
+            "pictHeight": 680,
+            "pictUrl": "https://jnup.oss-cn-beijing.aliyuncs.com/product/a5a6327689d541b43b5afcac146cd11a.gif?x-oss-process=style/small",
+            "type": "carouselProduct",
+            "items": [
+                {
+                    "imgUrl": "https://jnup.oss-cn-beijing.aliyuncs.com/product/08dd040cdf7250304e07d0c812b6895a.png?x-oss-process=style/small",
+                    "imgWidth": 800,
+                    "earnMoney": 0,
+                    "salesPrice": 399.00,
+                    "vipPrice": 0,
+                    "imgHeight": 800,
+                    "title": "美的家用电烤箱PT1011  10L容量 智能烘焙蛋糕饼干 方便实用",
+                    "jumpUrl": "jinaup://contentValue=product&businessId=50158&uiType=1"
+                },
+                {
+                    "imgUrl": "https://jnup.oss-cn-beijing.aliyuncs.com/product/be119871e5d49349da46b9494582d302.jpeg?x-oss-process=style/small",
+                    "imgWidth": 800,
+                    "earnMoney": 0,
+                    "salesPrice": 399.00,
+                    "vipPrice": 0,
+                    "imgHeight": 800,
+                    "title": "哈密瓜纳米洗衣球2个（一黄一蓝/套）",
+                    "jumpUrl": "jinaup://contentValue=product&businessId=51653&uiType=1"
+                },
+                {
+                    "imgUrl": "https://jnup.oss-cn-beijing.aliyuncs.com/web/uploads/image/store_1/86f41735067f946fbcaa9eb1c72211aa59de424e.jpg?x-oss-process=style/small",
+                    "imgWidth": null,
+                    "earnMoney": 0,
+                    "salesPrice": 399.00,
+                    "vipPrice": 0,
+                    "imgHeight": null,
+                    "title": "美国宝膳力（Proctor Silex）陶瓷内胆多功能美式炖锅33139-CN",
+                    "jumpUrl": "jinaup://contentValue=product&businessId=3809&uiType=1"
+                },
+                {
+                    "imgUrl": "https://jnup.oss-cn-beijing.aliyuncs.com/product/3c5327f597b3c4de472359224ba503fd.png?x-oss-process=style/small",
+                    "imgWidth": 800,
+                    "earnMoney": 0,
+                    "salesPrice": 399.00,
+                    "vipPrice": 0,
+                    "imgHeight": 800,
+                    "title": "MXM喵小米智能小宝机器人儿童玩具高科技语音对话陪伴学习早教机",
+                    "jumpUrl": "jinaup://contentValue=product&businessId=52201&uiType=1"
+                },
+                {
+                    "imgUrl": "https://jnup.oss-cn-beijing.aliyuncs.com/product/7ac52eca20006add5ca22297c6796765.jpg?x-oss-process=style/small",
+                    "imgWidth": 800,
+                    "earnMoney": 0,
+                    "salesPrice": 399.00,
+                    "vipPrice": 0,
+                    "imgHeight": 800,
+                    "title": "RHAPPY敬乐 最初系列 简约时尚潮流白面石英男士腕表RH.Z.0.0.0.1A",
+                    "jumpUrl": "jinaup://contentValue=product&businessId=51823&uiType=1"
+                },
+                {
+                    "imgUrl": "https://jnup.oss-cn-beijing.aliyuncs.com/product/f366ce8602514bbc7f599183cf43b44b.jpg?x-oss-process=style/small",
+                    "imgWidth": 800,
+                    "earnMoney": 0,
+                    "salesPrice": 399.00,
+                    "vipPrice": 0,
+                    "imgHeight": 800,
+                    "title": "贵州茅台镇 窖藏浓香型白酒52度 500ml*6瓶（整箱装）",
+                    "jumpUrl": "jinaup://contentValue=product&businessId=49755&uiType=1"
+                },
+                {
+                    "imgUrl": "https://jnup.oss-cn-beijing.aliyuncs.com/product/f56559622d7e96c78e8445892bf87ea9.jpg?x-oss-process=style/small",
+                    "imgWidth": 800,
+                    "earnMoney": 0,
+                    "salesPrice": 399.00,
+                    "vipPrice": 0,
+                    "imgHeight": 800,
+                    "title": "中粮名庄荟 法国黑轩骑士干红葡萄酒750ml*4瓶",
+                    "jumpUrl": "jinaup://contentValue=product&businessId=49826&uiType=1"
+                },
+                {
+                    "imgUrl": "https://jnup.oss-cn-beijing.aliyuncs.com/web/uploads/image/store_1/4b7dfea6891f45f4a4c3b06de4633e0384d64525.jpg?x-oss-process=style/small",
+                    "imgWidth": null,
+                    "earnMoney": 0,
+                    "salesPrice": 399.00,
+                    "vipPrice": 0,
+                    "imgHeight": null,
+                    "title": "汉美驰（Hamilton Beach）家用多功能绞肉料理搅拌机72860-CN",
+                    "jumpUrl": "jinaup://contentValue=product&businessId=16&uiType=1"
+                },
+                {
+                    "imgUrl": "https://jnup.oss-cn-beijing.aliyuncs.com/product/0ed4b294fa9350cf7a1fbd2c539baf40.jpg?x-oss-process=style/small",
+                    "imgWidth": 800,
+                    "earnMoney": 0,
+                    "salesPrice": 399.00,
+                    "vipPrice": 0,
+                    "imgHeight": 800,
+                    "title": "花皙蔻小白刷限量定制纪念版礼盒",
+                    "jumpUrl": "jinaup://contentValue=product&businessId=51795&uiType=1"
+                },
+                {
+                    "imgUrl": "https://jnup.oss-cn-beijing.aliyuncs.com/web/uploads/image/store_1/b02b7cc17bebb588d2d5908804b3776451497285.png?x-oss-process=style/small",
+                    "imgWidth": null,
+                    "earnMoney": 0,
+                    "salesPrice": 399.00,
+                    "vipPrice": 0,
+                    "imgHeight": null,
+                    "title": "子初臻藏温泉水护肤礼盒",
+                    "jumpUrl": "jinaup://contentValue=product&businessId=947&uiType=1"
+                },
+                {
+                    "imgUrl": "https://jnup.oss-cn-beijing.aliyuncs.com/product/48d4c83fb30b86ab119d9116c7219af8.jpg?x-oss-process=style/small",
+                    "imgWidth": 400,
+                    "earnMoney": 0,
+                    "salesPrice": 399.00,
+                    "vipPrice": 0,
+                    "imgHeight": 400,
+                    "title": "唯萨家纺 纯棉喷气印花床品四件套",
+                    "jumpUrl": "jinaup://contentValue=product&businessId=51932&uiType=1"
+                },
+                {
+                    "imgUrl": "https://jnup.oss-cn-beijing.aliyuncs.com/product/2566316227af2b7936fdf00a65623186.jpg?x-oss-process=style/small",
+                    "imgWidth": 640,
+                    "earnMoney": 0,
+                    "salesPrice": 399.00,
+                    "vipPrice": 0,
+                    "imgHeight": 640,
+                    "title": "暖蓝智能热灸暖宫仪缓解痛经不适感排毒养颜神器",
+                    "jumpUrl": "jinaup://contentValue=product&businessId=51684&uiType=1"
+                }
+            ],
+            "jumpUrl": "jinaup://contentValue=topic&businessId=1&uiType=2",
+            "pictWidth": 782
+        },
+        {
+            "pictHeight": 308,
+            "pictUrl": "https://jnup.oss-cn-beijing.aliyuncs.com/product/09540c53ce9c5d5a62181ae250df2131.jpg?x-oss-process=style/small",
+            "type": "adOne",
+            "pictWidth": 780,
+            "jumpUrl": "jinaup://contentValue=topic&businessId=182&uiType=1"
+        },
+        {
+            "pictHeight": null,
+            "pictUrl": null,
+            "type": "sixProduct",
+            "items": [
+                {
+                    "imgUrl": "https://jnup.oss-cn-beijing.aliyuncs.com/product/664b019bff10838e9a6d2594a57c1097.png?x-oss-process=style/small",
+                    "imgWidth": 367,
+                    "earnMoney": 6.95,
+                    "salesPrice": 39.00,
+                    "vipPrice": 32.05,
+                    "imgHeight": 367,
+                    "title": "PEPPA PIG/ 小猪佩奇 儿童牛奶香型洗手液 300ML",
+                    "jumpUrl": "jinaup://contentValue=product&businessId=36280&uiType=1"
+                },
+                {
+                    "imgUrl": "https://jnup.oss-cn-beijing.aliyuncs.com/product/75f75a47c6869b33905c95d485949e86.jpg?x-oss-process=style/small",
+                    "imgWidth": 450,
+                    "earnMoney": 8.94,
+                    "salesPrice": 86.00,
+                    "vipPrice": 77.06,
+                    "imgHeight": 450,
+                    "title": "AVEENO/艾维诺 婴儿天然燕麦润肤霜 226g/支 干燥敏感肌肤适用",
+                    "jumpUrl": "jinaup://contentValue=product&businessId=36551&uiType=1"
+                },
+                {
+                    "imgUrl": "https://jnup.oss-cn-beijing.aliyuncs.com/product/f88331b84642a06bb684d9c8974b233d.jpg?x-oss-process=style/small",
+                    "imgWidth": 800,
+                    "earnMoney": 5.96,
+                    "salesPrice": 52.00,
+                    "vipPrice": 46.04,
+                    "imgHeight": 800,
+                    "title": "GERBER/嘉宝 DHA益生菌大米米粉 1段 227G",
+                    "jumpUrl": "jinaup://contentValue=product&businessId=36653&uiType=1"
+                },
+                {
+                    "imgUrl": "https://jnup.oss-cn-beijing.aliyuncs.com/product/da4c09c2e9aaafa24729ed32a8937d12.jpg?x-oss-process=style/small",
+                    "imgWidth": 800,
+                    "earnMoney": 0.94,
+                    "salesPrice": 9.90,
+                    "vipPrice": 8.96,
+                    "imgHeight": 800,
+                    "title": "【1双装】金雅涵冰丝防晒套袖护臂冰爽开车防晒袖套",
+                    "jumpUrl": "jinaup://contentValue=product&businessId=51538&uiType=1"
+                },
+                {
+                    "imgUrl": "http://haitao.nos.netease.com/1ce64nbpo44_800_800.jpg?x-oss-process=style/small",
+                    "imgWidth": null,
+                    "earnMoney": 1.98,
+                    "salesPrice": 32.00,
+                    "vipPrice": 30.02,
+                    "imgHeight": null,
+                    "title": "Bumkins 宝宝防水围兜 消防车 （4-24个月宝宝）",
+                    "jumpUrl": "jinaup://contentValue=product&businessId=50892&uiType=1"
+                },
+                {
+                    "imgUrl": "https://jnup.oss-cn-beijing.aliyuncs.com/web/uploads/image/store_1/4eb619bfff978dcc64bc01812856f0b5ac0532f5.jpg?x-oss-process=style/small",
+                    "imgWidth": null,
+                    "earnMoney": 13.42,
+                    "salesPrice": 192.00,
+                    "vipPrice": 178.58,
+                    "imgHeight": null,
+                    "title": "安耐晒/安热沙 防晒霜SPF50 60ml/瓶 2018新版",
+                    "jumpUrl": "jinaup://contentValue=product&businessId=36223&uiType=1"
+                }
+            ],
+            "pictWidth": null
+        },
+        {
+            "pictHeight": 308,
+            "pictUrl": "https://jnup.oss-cn-beijing.aliyuncs.com/product/218b4c27298b0b1ceb771217bd7017b9.jpg?x-oss-process=style/small",
+            "type": "adOne",
+            "pictWidth": 780,
+            "jumpUrl": "jinaup://contentValue=topic&businessId=181&uiType=1"
+        },
+        {
+            "pictHeight": null,
+            "pictUrl": null,
+            "type": "sixProduct",
+            "items": [
+                {
+                    "imgUrl": "https://jnup.oss-cn-beijing.aliyuncs.com/product/86e7174d47b40118511e7213da308e89.jpg?x-oss-process=style/small",
+                    "imgWidth": 800,
+                    "earnMoney": 1.14,
+                    "salesPrice": 19.80,
+                    "vipPrice": 18.66,
+                    "imgHeight": 800,
+                    "title": "宝宝蛋 3080张幼儿童专注力训练贴纸书全16册 0-3-6岁早教儿童贴贴画 幼儿园动手动脑贴贴画 套装",
+                    "jumpUrl": "jinaup://contentValue=product&businessId=52032&uiType=1"
+                },
+                {
+                    "imgUrl": "https://jnup.oss-cn-beijing.aliyuncs.com/product/b59cddac597ea5196b48f4120bfd4ab4.png?x-oss-process=style/small",
+                    "imgWidth": 800,
+                    "earnMoney": 1.88,
+                    "salesPrice": 17.80,
+                    "vipPrice": 15.92,
+                    "imgHeight": 800,
+                    "title": "宝宝蛋 正版3册 口才三绝+修心三不+为人三会 青春励志心灵鸡汤 人际社交说话技巧励志书籍",
+                    "jumpUrl": "jinaup://contentValue=product&businessId=52034&uiType=1"
+                },
+                {
+                    "imgUrl": "https://jnup.oss-cn-beijing.aliyuncs.com/product/5537d090ecd658cc61b97fa161758c25.jpg?x-oss-process=style/small",
+                    "imgWidth": 800,
+                    "earnMoney": 2.43,
+                    "salesPrice": 31.90,
+                    "vipPrice": 29.47,
+                    "imgHeight": 800,
+                    "title": "宝宝蛋 暖心获奖绘本系列全8册 绘本3-6岁 幼儿园情商培养暖心儿童故事书",
+                    "jumpUrl": "jinaup://contentValue=product&businessId=52038&uiType=1"
+                },
+                {
+                    "imgUrl": "https://jnup.oss-cn-beijing.aliyuncs.com/product/3445a29b9fc8caa776feb776a10cb815.jpg?x-oss-process=style/small",
+                    "imgWidth": 800,
+                    "earnMoney": 2.43,
+                    "salesPrice": 39.90,
+                    "vipPrice": 37.47,
+                    "imgHeight": 800,
+                    "title": "宝宝蛋 会说话的有声书充电版 0-3-6岁宝宝点读认知发声书幼儿早教启蒙绘本（黄盒）",
+                    "jumpUrl": "jinaup://contentValue=product&businessId=52081&uiType=1"
+                },
+                {
+                    "imgUrl": "https://jnup.oss-cn-beijing.aliyuncs.com/product/51de0b615aa6eee7562f61c8423809fc.jpg?x-oss-process=style/small",
+                    "imgWidth": 800,
+                    "earnMoney": 1.49,
+                    "salesPrice": 29.00,
+                    "vipPrice": 27.51,
+                    "imgHeight": 800,
+                    "title": "宝宝蛋 【26本】儿童练字帖凹槽练字板+幼儿数字描红本+口算心算幼儿园幼小衔接拼音凹槽写字贴",
+                    "jumpUrl": "jinaup://contentValue=product&businessId=52167&uiType=1"
+                },
+                {
+                    "imgUrl": "https://jnup.oss-cn-beijing.aliyuncs.com/product/39f993cec9f13a8b4465dd6623493e01.jpg?x-oss-process=style/small",
+                    "imgWidth": 800,
+                    "earnMoney": 2.73,
+                    "salesPrice": 19.50,
+                    "vipPrice": 16.77,
+                    "imgHeight": 800,
+                    "title": "宝宝蛋 全10册儿童练字帖数字描红本幼儿园幼小衔接铅笔描红",
+                    "jumpUrl": "jinaup://contentValue=product&businessId=52184&uiType=1"
+                }
+            ],
+            "pictWidth": null
+        },
+        {
+            "pictHeight": 308,
+            "pictUrl": "https://jnup.oss-cn-beijing.aliyuncs.com/product/6eee3ccc7e6bbe0842a246b2cf6d0807.jpg?x-oss-process=style/small",
+            "type": "adOne",
+            "pictWidth": 780,
+            "jumpUrl": "jinaup://contentValue=topic&businessId=185&uiType=1"
+        },
+        {
+            "pictHeight": null,
+            "pictUrl": null,
+            "type": "sixProduct",
+            "items": [
+                {
+                    "imgUrl": "https://jnup.oss-cn-beijing.aliyuncs.com/product/f2a78fbd24e71ea782271cdcc45bfc9d.jpg?x-oss-process=style/small",
+                    "imgWidth": 800,
+                    "earnMoney": 27.33,
+                    "salesPrice": 399.00,
+                    "vipPrice": 371.67,
+                    "imgHeight": 800,
+                    "title": "婧麒防辐射服孕妇装正品怀孕期放辐射吊带夏天内穿女上班隐形肚兜",
+                    "jumpUrl": "jinaup://contentValue=product&businessId=52214&uiType=1"
+                },
+                {
+                    "imgUrl": "https://jnup.oss-cn-beijing.aliyuncs.com/product/faa30bdbd388bd6c7a03602ee76dc147.jpg?x-oss-process=style/small",
+                    "imgWidth": 800,
+                    "earnMoney": 23.85,
+                    "salesPrice": 249.00,
+                    "vipPrice": 225.15,
+                    "imgHeight": 800,
+                    "title": "婧麒防辐射服孕妇装怀孕期内穿孕妇肚兜女防幅射衣防幅射孕衣上班",
+                    "jumpUrl": "jinaup://contentValue=product&businessId=52198&uiType=1"
+                },
+                {
+                    "imgUrl": "https://jnup.oss-cn-beijing.aliyuncs.com/product/5effa6626007c87e88bf4250c3a44d9f.jpg?x-oss-process=style/small",
+                    "imgWidth": 800,
+                    "earnMoney": 16.40,
+                    "salesPrice": 279.00,
+                    "vipPrice": 262.60,
+                    "imgHeight": 800,
+                    "title": "婧麒防辐射服孕妇装正品防辐射衣服肚兜隐形上班族怀孕期女夏内穿",
+                    "jumpUrl": "jinaup://contentValue=product&businessId=52172&uiType=1"
+                },
+                {
+                    "imgUrl": "https://jnup.oss-cn-beijing.aliyuncs.com/product/fc267dcc7d8b3ad94cc58d6905b1ecf2.jpg?x-oss-process=style/small",
+                    "imgWidth": 800,
+                    "earnMoney": 23.85,
+                    "salesPrice": 249.00,
+                    "vipPrice": 225.15,
+                    "imgHeight": 800,
+                    "title": "婧麒防辐射服孕妇装正品怀孕期孕妇防辐射衣服女连衣裙围裙四季穿",
+                    "jumpUrl": "jinaup://contentValue=product&businessId=52042&uiType=1"
+                },
+                {
+                    "imgUrl": "https://jnup.oss-cn-beijing.aliyuncs.com/product/78fc4d15f86bf0165914e02de91daac5.jpg?x-oss-process=style/small",
+                    "imgWidth": 800,
+                    "earnMoney": 11.43,
+                    "salesPrice": 119.00,
+                    "vipPrice": 107.57,
+                    "imgHeight": 800,
+                    "title": "婧麒孕妇防辐射服孕妇装正品防射服肚兜女内穿怀孕期上班隐形时尚",
+                    "jumpUrl": "jinaup://contentValue=product&businessId=51164&uiType=1"
+                },
+                {
+                    "imgUrl": "https://jnup.oss-cn-beijing.aliyuncs.com/product/791612152cd981fc440fc48278824dc4.jpg?x-oss-process=style/small",
+                    "imgWidth": 800,
+                    "earnMoney": 23.85,
+                    "salesPrice": 249.00,
+                    "vipPrice": 225.15,
+                    "imgHeight": 800,
+                    "title": "婧麒防辐射服孕妇装正品放福幅射衣服女肚兜怀孕期内穿围裙上班",
+                    "jumpUrl": "jinaup://contentValue=product&businessId=51668&uiType=1"
+                }
+            ],
+            "pictWidth": null
+        },
+        {
+            "pictHeight": 1385,
+            "pictUrl": "https://jnup.oss-cn-beijing.aliyuncs.com/product/35d9cec2a88b119668b06975c0651624.jpg?x-oss-process=style/small",
+            "type": "adOne",
+            "pictWidth": 3508,
+            "jumpUrl": "jinaup://contentValue=topic&businessId=186&uiType=1"
+        },
+        {
+            "pictHeight": null,
+            "pictUrl": null,
+            "type": "sixProduct",
+            "items": [
+                {
+                    "imgUrl": "https://jnup.oss-cn-beijing.aliyuncs.com/product/8b5023f1ebab457810ae13080a0bb0e2.jpg?x-oss-process=style/small",
+                    "imgWidth": 800,
+                    "earnMoney": 12.92,
+                    "salesPrice": 135.00,
+                    "vipPrice": 122.08,
+                    "imgHeight": 800,
+                    "title": "蓓臣/Babytry 婴儿背带腰凳四季通用多功能新生儿宝宝前抱式横抱式背带",
+                    "jumpUrl": "jinaup://contentValue=product&businessId=52071&uiType=1"
+                },
+                {
+                    "imgUrl": "https://jnup.oss-cn-beijing.aliyuncs.com/product/b8d98fb13a0a868100724619c352b707.jpg?x-oss-process=style/small",
+                    "imgWidth": 800,
+                    "earnMoney": 9.94,
+                    "salesPrice": 95.00,
+                    "vipPrice": 85.06,
+                    "imgHeight": 800,
+                    "title": "蓓臣/Babytry 婴儿玩具乐器益智早教机六面盒玩具",
+                    "jumpUrl": "jinaup://contentValue=product&businessId=52021&uiType=1"
+                },
+                {
+                    "imgUrl": "https://jnup.oss-cn-beijing.aliyuncs.com/product/7f1dd836ea828030438947c1a9b0a8ea.jpg?x-oss-process=style/small",
+                    "imgWidth": 800,
+                    "earnMoney": 11.92,
+                    "salesPrice": 99.00,
+                    "vipPrice": 87.08,
+                    "imgHeight": 800,
+                    "title": "蓓臣/Babytry 海绵宝宝正版授权遥控滑板车儿童遥控车玩具",
+                    "jumpUrl": "jinaup://contentValue=product&businessId=52091&uiType=1"
+                },
+                {
+                    "imgUrl": "https://jnup.oss-cn-beijing.aliyuncs.com/product/6dc97afc335701c975c1ff7a1a440a22.jpg?x-oss-process=style/small",
+                    "imgWidth": 800,
+                    "earnMoney": 1.19,
+                    "salesPrice": 9.90,
+                    "vipPrice": 8.71,
+                    "imgHeight": 800,
+                    "title": "蓓臣/Babytry 婴幼儿童家居防护防撞角 宝宝安全居家用品",
+                    "jumpUrl": "jinaup://contentValue=product&businessId=51926&uiType=1"
+                },
+                {
+                    "imgUrl": "https://jnup.oss-cn-beijing.aliyuncs.com/product/0d60c798b9952759fb6ac228dce4757d.jpg?x-oss-process=style/small",
+                    "imgWidth": 800,
+                    "earnMoney": 7.45,
+                    "salesPrice": 79.00,
+                    "vipPrice": 71.55,
+                    "imgHeight": 800,
+                    "title": "蓓臣/Babytry 宝宝无脚踏平衡车儿童声光学步滑步车溜溜车",
+                    "jumpUrl": "jinaup://contentValue=product&businessId=52004&uiType=1"
+                },
+                {
+                    "imgUrl": "https://jnup.oss-cn-beijing.aliyuncs.com/product/fd21a1b618a3126604e74e4adff70c00.jpg?x-oss-process=style/small",
+                    "imgWidth": 800,
+                    "earnMoney": 8.45,
+                    "salesPrice": 65.00,
+                    "vipPrice": 56.55,
+                    "imgHeight": 800,
+                    "title": "蓓臣/Babytry 婴儿理发器超静音宝宝家用剃头理发器电推剪充电式1-3岁",
+                    "jumpUrl": "jinaup://contentValue=product&businessId=52033&uiType=1"
+                }
+            ],
+            "pictWidth": null
+        },
+        {
+            "pictHeight": 308,
+            "pictUrl": "https://jnup.oss-cn-beijing.aliyuncs.com/product/cff6c4aae525f5ec96a41f6e21588294.jpg?x-oss-process=style/small",
+            "type": "adOne",
+            "pictWidth": 780,
+            "jumpUrl": "jinaup://contentValue=topic&businessId=184&uiType=1"
+        },
+        {
+            "pictHeight": null,
+            "pictUrl": null,
+            "type": "sixProduct",
+            "items": [
+                {
+                    "imgUrl": "https://jnup.oss-cn-beijing.aliyuncs.com/web/uploads/image/store_1/e57137403b1adb7a7db6d468e4fbbb5b09d400c1.jpg?x-oss-process=style/small",
+                    "imgWidth": null,
+                    "earnMoney": 8.94,
+                    "salesPrice": 229.00,
+                    "vipPrice": 220.06,
+                    "imgHeight": null,
+                    "title": "thisworks 皮肤舒压面膜 50ml【直邮包税】",
+                    "jumpUrl": "jinaup://contentValue=product&businessId=735&uiType=1"
+                },
+                {
+                    "imgUrl": "https://jnup.oss-cn-beijing.aliyuncs.com/web/uploads/image/store_1/32324f8c285d4095ad5832eb9d37fe4ac1883b38.jpg?x-oss-process=style/small",
+                    "imgWidth": null,
+                    "earnMoney": 5.96,
+                    "salesPrice": 179.00,
+                    "vipPrice": 173.04,
+                    "imgHeight": null,
+                    "title": "JAYJUN 水光橙色面膜10片/盒 【两盒装】",
+                    "jumpUrl": "jinaup://contentValue=product&businessId=4047&uiType=1"
+                },
+                {
+                    "imgUrl": "https://jnup.oss-cn-beijing.aliyuncs.com/web/uploads/image/store_1/44e81790f95616e5507103aaa088496d1a8ffe0a.jpg?x-oss-process=style/small",
+                    "imgWidth": null,
+                    "earnMoney": 6.95,
+                    "salesPrice": 109.00,
+                    "vipPrice": 102.05,
+                    "imgHeight": null,
+                    "title": "JMSOLUTION 欧若拉樱花面膜 10片 2件装",
+                    "jumpUrl": "jinaup://contentValue=product&businessId=35793&uiType=1"
+                },
+                {
+                    "imgUrl": "https://jnup.oss-cn-beijing.aliyuncs.com/product/5ff2e16ecbe2d3582065d1c89e50d231.jpg?x-oss-process=style/small",
+                    "imgWidth": 450,
+                    "earnMoney": 4.97,
+                    "salesPrice": 99.00,
+                    "vipPrice": 94.03,
+                    "imgHeight": 450,
+                    "title": "韩国FHD血橙面膜滋养救急补水舒缓肌肤收缩毛孔 30片/盒",
+                    "jumpUrl": "jinaup://contentValue=product&businessId=49902&uiType=1"
+                },
+                {
+                    "imgUrl": "https://jnup.oss-cn-beijing.aliyuncs.com/product/4e1e20f5b1905d460a2bf94fa1c915a0.jpg?x-oss-process=style/small",
+                    "imgWidth": 800,
+                    "earnMoney": 6.95,
+                    "salesPrice": 78.00,
+                    "vipPrice": 71.05,
+                    "imgHeight": 800,
+                    "title": "INNISFREE/悦诗风吟 新款真萃鲜润面膜 人参 20ML*10",
+                    "jumpUrl": "jinaup://contentValue=product&businessId=50740&uiType=1"
+                },
+                {
+                    "imgUrl": "https://jnup.oss-cn-beijing.aliyuncs.com/product/047b02d518af028e270df50277ffe077.jpg?x-oss-process=style/small",
+                    "imgWidth": 800,
+                    "earnMoney": 5.96,
+                    "salesPrice": 88.00,
+                    "vipPrice": 73.04,
+                    "imgHeight": 800,
+                    "title": "SNP 钻石水分睡眠面膜 4ML*20支装",
+                    "jumpUrl": "jinaup://contentValue=product&businessId=69565&uiType=1"
+                }
+            ],
+            "pictWidth": null
+        }
+    ],
+    "message": "成功",
+    "systemTime": 1562566826935,
+    "res_code": 1
+}

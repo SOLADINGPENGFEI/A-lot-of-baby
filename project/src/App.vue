@@ -10,23 +10,23 @@ export default {
      * 支付宝(蚂蚁)：mpvue === my, mpvuePlatform === 'my'
      */
 
-    let logs
-    if (mpvuePlatform === 'my') {
-      logs = mpvue.getStorageSync({key: 'logs'}).data || []
-      logs.unshift(Date.now())
-      mpvue.setStorageSync({
-        key: 'logs',
-        data: logs
-      })
-    } else {
-      logs = mpvue.getStorageSync('logs') || []
-      logs.unshift(Date.now())
-      mpvue.setStorageSync('logs', logs)
-    }
+    // let logs
+    // if (mpvuePlatform === 'my') {
+    //   logs = mpvue.getStorageSync({key: 'logs'}).data || []
+    //   logs.unshift(Date.now())
+    //   mpvue.setStorageSync({
+    //     key: 'logs',
+    //     data: logs
+    //   })
+    // } else {
+    //   logs = mpvue.getStorageSync('logs') || []
+    //   logs.unshift(Date.now())
+    //   mpvue.setStorageSync('logs', logs)
+    // }
   },
-  log () {
-    console.log(`log at:${Date.now()}`)
-  }
+  // log () {
+  //   console.log(`log at:${Date.now()}`)
+  // }
 }
 </script>
 
@@ -46,5 +46,10 @@ export default {
   -moz-transition: width 2s;
   -webkit-transition: width 2s;
   -o-transition: width 2s;
+  box-sizing: border-box;
+}
+page{
+  width: 100%;
+  height: 100%;
 }
 </style>

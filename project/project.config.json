@@ -1,18 +1,6 @@
 {
 	"description": "项目配置文件。",
 	"setting": {
-<<<<<<< HEAD
-		"urlCheck": true,
-		"es6": false,
-		"postcss": true,
-		"minified": true,
-		"newFeature": true
-	},
-	"miniprogramRoot": "dist/wx/",
-	"compileType": "miniprogram",
-	"appid": "wxa112d389bc8929c7",
-	"projectname": "%E9%A9%AC%E4%B8%81%E9%A3%9E%E8%B4%AD%E7%89%A9",
-=======
 		"urlCheck": false,
 		"es6": false,
 		"postcss": true,
@@ -34,7 +22,6 @@
 	"compileType": "miniprogram",
 	"appid": "wx53575f9e72f585ce",
 	"projectname": "%E7%94%B5%E5%95%86",
->>>>>>> c03bd8c321c9a27e4af5897f853384add1590ec0
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
 	"condition": {

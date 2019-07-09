@@ -5,32 +5,32 @@
               <!-- 首页搜索导航跳转搜索页面 -->
             <div class="inPut">
                 <div class="bigInput">
-                     <img src="/static/images/search.png" alt="">
+                     <image src="/static/images/search.png">
                      <div>请输入商品名称</div>
                 </div>
             </div>      
               <!-- 导航组件 -->
               <Nava></Nava>  
               <!-- 轮播图组件 -->
-              <swiper-a></swiper-a>
+              <SwiperA></SwiperA>
               <!-- 首页Banner广告图 -->
             <div class="banner">
                 <div class="banOne">
-                    <img src="" />
+                    <image src="" />
                 </div>
                 <div class="banTwo">
-                    <img class="one" src="" />
-                    <img class="two" src="" />
+                    <image class="one" src="" />
+                    <image class="two" src="" />
                 </div>
             </div>
 
             <div class="bigimg">
-               <img src="" alt="">
+               <image src="" alt="">
             </div>
              <!--精选好物Dl组件  --> 
-            <ban-ner></ban-ner>
+            <banNer></banNer>
             <!-- 底部加载loading组件 -->
-            <loa-ding></loa-ding>
+            <loaDing></loaDing>
   </div>
   </scroll-view>
 </template>

@@ -1,56 +1,73 @@
 <template>
-    <div class="banner">
-    <swiper 
-    :indicator-dots="indicatorDots" 
-    :autoplay="autoplay" 
-    :interval="interval" 
-    :duration="duration"
-    @change="change">
-        <div v-for="(item,index) in Images" :key="index">
-           <swiper-item>
-                <img :src="item.imgUrl" />
-                </swiper-item>
-        </div>
-        </swiper>
-        <p class="page">
-            <span>{{index}}</span>
-            <span>/{{Images.length}}</span>
-        </p>
-      </div>
+     <swiper class="lunBo" :indicator-dots="indicatorDots"
+  :autoplay="autoplay" :interval="interval" :duration="duration" :circular="circular" >
+  <block v-if="getswipe[0].items">
+    <swiper-item class="item" v-for="(item,index) in getswipe && getswipe[0].items" :key="index">
+            <image :src="item.imgUrl" alt="" @click="toDetail(index)" />
+    </swiper-item>
+  </block>
+</swiper>      
+
 </template>
 
 <script>
+import { mapActions, mapState } from "vuex";
 export default {
-  props: {
-    Images: {
-      type: Array,
-      default: []
-    }
-  },
   data() {
     return {
+      circular: true,
       indicatorDots: true,
       autoplay: true,
-      interval: 3000,
-      duration: 500,
-      index:0
+      interval: 5000,
+      duration: 1000
     };
   },
-  mounted() {
-    console.log("current", this.current);
-  },
-  methods:{
-    change(e){
-      console.log(e.target.current)
-      this.index=e.target.current+1
+  methods: {
+    ...mapActions({
+      getswiper: "Swiper/swipers"
+    }),
+    toDetail(i){
+      if(i==0){
+        wx.navigateTo({
+          url:'/pages/carouse/dapai/main'
+        })
+      }else if(i==1){
+         wx.navigateTo({
+          url:'/pages/carouse/summer/main'
+        })
+      }else if(i==2){
+        wx.navigateTo({
+          url:'/pages/carouse/baby/main'
+        })
+      }else if(i==3){
+         wx.navigateTo({
+          url:'/pages/carouse/egg/main'
+        })
+      }
     }
+  },
+  computed: {
+    ...mapState({
+      // 把vuex数据赋给变量名
+      getswipe: state => state.Swiper.getswipe
+    })
+  },
+  onShow() {
+    this.getswiper();
+    
   }
 };
 </script>
 
 <style scoped lang="scss">
-page {
+.lunBo {
   width: 100%;
-  height: 100%;
+  height: 150px;
+  background: #fff;
+  margin-top: 5px;
+  image {
+    width: 100%;
+    height: 100%;
+  }
 }
 </style>

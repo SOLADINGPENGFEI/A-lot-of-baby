@@ -14,7 +14,7 @@
 <script>
 import store from "@/store";
 import { mapState, mapActions } from "vuex";
-import Swiper from "@/components/swiper/swiper.vue";
+import Swiper from "@/components/swiper/dapaiSwiper.vue";
 
 export default {
   props: {},
@@ -74,7 +74,7 @@ page {
           font-size: 15px;
           color:brown;
            margin-right: 10px;
-           margin-left: 7px;
+           margin-left: 10px;
       }
       .earn{
           font-size: 14px;

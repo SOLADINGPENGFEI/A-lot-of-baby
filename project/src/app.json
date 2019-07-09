@@ -1,8 +1,9 @@
 {
   "pages": [
+    "pages/index/main",
     "pages/carouse/dapai/main",
     "pages/carouse/dapai/dapaiDetail/main",
-    "pages/index/main",
+    
     "pages/carouse/summer/main",
     
     "pages/carouse/baby/main",

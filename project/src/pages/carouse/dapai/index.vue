@@ -1,6 +1,5 @@
 <template>
     <div class="dapai">
-        <!-- <Carouse :dapaiData="dapaiData"/> -->
          <div class="header">
             <img :src="dapaiData.specialImg" alt="">
             <h2>{{dapaiData.anchors[0].anchorDesc}}</h2>

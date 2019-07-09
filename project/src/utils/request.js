@@ -5,7 +5,11 @@ export let fly = new Fly
 //设置超时
 fly.config.timeout=10000;
 //设置请求基地址
+<<<<<<< HEAD
 fly.config.baseURL = 'https://sign.jasonandjay.com/'
+=======
+fly.config.baseURL = 'https://tcb-api.tencentcloudapi.com'
+>>>>>>> 14984a82ce9b16fb48e2f0f3d66611dbe8768bf6
 // fly.config.baseURL = "http://123.206.55.50:7001/"
 // fly.config.baseURL = "http://169.254.12.68:7001/"
 // fly.config.baseURL = 'http://127.0.0.1:7001/'
@@ -14,10 +18,17 @@ const HOST = 'https://127.0.0.1' // 更改
 //添加请求拦截器
 fly.interceptors.request.use((request) => {
   // 把openid放在请求头部
+<<<<<<< HEAD
   let openid = wx.getStorageSync('openid');
   if (openid){
     request.headers['openid'] = openid;
   }
+=======
+  // let trackId = wx.getStorageSync('trackId');
+  // if (trackId){
+  //   request.headers['trackId'] = trackId;
+  // }
+>>>>>>> 14984a82ce9b16fb48e2f0f3d66611dbe8768bf6
   //给所有请求添加自定义header
   // request.headers["Cookie"] = map(cookies, (v, k) => k + '=' + v).join(';')
   //打印出请求体
@@ -52,5 +63,9 @@ fly.interceptors.response.use(
   }
 )
 
+<<<<<<< HEAD
 export default fly
 
+=======
+export default fly
+>>>>>>> 14984a82ce9b16fb48e2f0f3d66611dbe8768bf6

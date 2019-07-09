@@ -1,4 +1,4 @@
-import { carouse } from '@/server';
+import { carouse } from '@/Api';
 const state = {
     dapaiData: {},
     summerData: {},

@@ -1,23 +1,36 @@
 <template>
  <div class="topbar">
 <scroll-view class="scroll-view_H" scroll-x style="width: 100%">
-         <view class="active">1111</view>
-         <view>1111</view>
-         <view>1111</view>
-         <view>1111</view>
-         <view>1111</view>
-         <view>1111</view>
-         <view>1111</view>
-         <view>1111</view>
-         <view>1111</view>                   
+         <view class="active">今日推荐</view>
+         <view v-for="(item,index) in navlist" :key="index">{{item.cname}}</view>                  
       </scroll-view>
+    
  </div>
 </template>
 
 
 <script>
+ import {mapActions,mapState} from 'vuex'
+ 
+
 export default {
-    
+     
+
+  methods:{
+     ...mapActions({
+         navtab:'nav/navtab'
+     })
+  },
+
+  computed:{
+      ...mapState({
+        // 把vuex数据赋给变量名
+         navlist:state=>state.nav.navlist
+      })
+  },
+  created(){
+     this.navtab()
+  }
 }
 </script>
 
@@ -29,7 +42,7 @@ export default {
   padding-left: 1%;
 }
 .scroll-view_H{
-  display: flex;
+ 
   white-space: nowrap;
    view{
   height: 100%;
@@ -39,8 +52,8 @@ export default {
   margin: 0 15px;
   } 
   .active{
-      color:red;
-      border-bottom:2px solid red;
+      color:rgb(42, 189, 42);
+      border-bottom:2px solid rgb(42, 189, 42);
   }
 }
 

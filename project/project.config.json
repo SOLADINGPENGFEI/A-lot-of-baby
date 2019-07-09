@@ -4,8 +4,8 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": false,
-		"es6": true,
+		"urlCheck": true,
+		"es6": false,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
@@ -13,15 +13,33 @@
 		"checkInvalidKey": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.7.3",
-	"appid": "wxace99cbcac230d08",
-	"projectname": "project",
+	"appid": "wxa112d389bc8929c7",
+	"projectname": "%E9%A9%AC%E4%B8%81%E9%A3%9E%E8%B4%AD%E7%89%A9",
+		"urlCheck": false,
+		"es6": false,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": false,
+		"uglifyFileName": true,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+	
+	
 	"miniprogramRoot": "dist/wx/",
-	"cloudfunctionTemplateRoot": "",
-	"debugOptions": {
-		"hidedInDevtools": []
-	},
-	"scripts": {},
+	"compileType": "miniprogram",
+	"appid": "wx53575f9e72f585ce",
+	"projectname": "%E7%94%B5%E5%95%86",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+
 	"condition": {
 		"search": {
 			"current": -1,

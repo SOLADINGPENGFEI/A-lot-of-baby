@@ -5,11 +5,25 @@
 	},
 	"setting": {
 		"urlCheck": false,
-		"es6": false,
-		"postcss": true,
-		"minified": true,
+		"es6": true,
+		"postcss": false,
+		"minified": false,
 		"newFeature": true,
+<<<<<<< HEAD
 		"autoAudits": false
+=======
+		"coverView": true,
+		"autoAudits": false,
+		"uglifyFileName": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
+>>>>>>> 81d1e4869ac380fe6dd1575d9db5607d57d95852
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.7.3",
@@ -37,6 +51,7 @@
 			"list": []
 		},
 		"miniprogram": {
+<<<<<<< HEAD
 			"current": 4,
 			"list": [
 				{
@@ -67,6 +82,15 @@
 					"id": -1,
 					"name": "大牌详情",
 					"pathName": "pages/carouse/dapai/dapaiDetail/main"
+=======
+			"current": 0,
+			"list": [
+				{
+					"id": -1,
+					"name": "添加地址页面",
+					"pathName": "pages/newaddress/main",
+					"scene": null
+>>>>>>> 81d1e4869ac380fe6dd1575d9db5607d57d95852
 				}
 			]
 		}

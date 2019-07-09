@@ -1,6 +1,10 @@
 <template>
     <div class="banner">
-    <swiper :autoplay="autoplay" 
+    <swiper 
+    :indicator-dots="indicatorDots" 
+    :autoplay="autoplay" 
+    :interval="interval" 
+    :duration="duration"
     @change="change">
         <div v-for="(item,index) in Images" :key="index">
            <swiper-item>
@@ -25,8 +29,11 @@ export default {
   },
   data() {
     return {
+      indicatorDots: true,
       autoplay: true,
-      index:1
+      interval: 3000,
+      duration: 500,
+      index:0
     };
   },
   mounted() {

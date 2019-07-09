@@ -8,15 +8,22 @@ import index from './modules/index'
 Vue.use(Vuex);
 
 import createLogger from 'vuex/dist/logger'
+import nav from './modules/navlist'
+import Swiper from './modules/swiper'
+import loading from './modules/loading'
 
 
 export default new Vuex.Store({
     modules: {
         index,
-        carouse
-
+        carouse,
+        nav,
+        Swiper,
+        loading
     },
     state: {
         
     }
+   
+   
 })

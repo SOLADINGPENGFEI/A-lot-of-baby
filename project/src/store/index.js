@@ -1,19 +1,27 @@
-//挂载 modules
+
 import Vue from 'vue'
 import Vuex from 'vuex'
-// import createLogger from 'vuex/dist/logger'
-import index from './modules/index'
-import nav from './modules/nav'
+import createLogger from 'vuex/dist/logger'
+
 // 引入子模块
+import index from './modules/index'
+
+import nav from './modules/navlist'
+import Swiper from './modules/swiper'
+import loading from './modules/loading'
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
     modules: {
-      index,
-      nav
+        index,
+        nav,
+        Swiper,
+        loading
     },
     state: {
         
     }
+   
+   
 })

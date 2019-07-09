@@ -58,13 +58,8 @@
   </div>
 </template>
 <script>
+import {mapState} from 'vuex'
 export default {
-  props:{
-
-  },
-  components:{
-
-  },
   data(){
     return {
       navStatus: [
@@ -75,12 +70,12 @@ export default {
     }
   },
   computed:{
-
+      
   },
   methods:{
       obligation(i) {
         wx.navigateTo({
-          url:'/pages/obligation/main?index='+i
+          url:'/pages/obligation/main'
         })
       },
       mycoupon() {

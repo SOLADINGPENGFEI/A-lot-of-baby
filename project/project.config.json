@@ -6,27 +6,19 @@
 	"setting": {
 		"urlCheck": false,
 		"es6": true,
-		"postcss": true,
-		"minified": true,
+		"postcss": false,
+		"minified": false,
 		"newFeature": true,
 		"autoAudits": false,
-		"checkInvalidKey": true
-	},
-	"urlCheck": false,
-	"es6": false,
-	"postcss": true,
-	"minified": true,
-	"newFeature": true,
-	"coverView": true,
-	"autoAudits": false,
-	"uglifyFileName": true,
-	"checkInvalidKey": true,
-	"checkSiteMap": true,
-	"uploadWithSourceMap": true,
-	"babelSetting": {
-		"ignore": [],
-		"disablePlugins": [],
-		"outputPath": ""
+		"uglifyFileName": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
 	},
 	"miniprogramRoot": "dist/wx/",
 	"compileType": "miniprogram",
@@ -55,8 +47,8 @@
 			"list": [
 				{
 					"id": -1,
-					"name": "奶粉",
-					"pathName": "pages/classify/main",
+					"name": "添加地址页面",
+					"pathName": "pages/newaddress/main",
 					"scene": null
 				}
 			]

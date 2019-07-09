@@ -1,7 +1,8 @@
 <template>
     <div class='mycoupon'>
         <div class="head">
-            <span v-for="(item,index) in couponNav" :key='index'>{{item}}</span>
+            <span v-for="(item,index) in couponNav" :key='index'
+            :class="i===index?'active':null" @click="couponClick(index)">{{item}}</span>
         </div>
         <div class="main">
             <div class="uncoupon">
@@ -21,14 +22,17 @@ export default {
     },
     data(){
         return {
-            couponNav: ['未使用','已使用','已过期']
+            couponNav: ['未使用','已使用','已过期'],
+            i: 0
         }
     },
     computed:{
 
     },
     methods:{
-
+        couponClick(index) {
+            this.i = index
+        }
     },
     created(){
 
@@ -63,10 +67,11 @@ export default {
                 width: 25%;
                 height: 100%;
                 display: inline-block;
-            }
-            &.active {
+                 &.active {
                 border-bottom: 2px solid #12dbe9;
             }
+            }
+           
         }
         .main {
             width: 100%;

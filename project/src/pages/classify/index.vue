@@ -1,28 +1,18 @@
 <template>
-    <div class="wrap" v-if="navs">
-        <scroll-view class="nav" scroll-x style="width: 100%" 
-       >
-            <span>今日推荐</span>
-            <span>今日推荐</span>
-            <span>今日推荐</span>
-            <span>今日推荐</span>
-            <span>今日推荐</span>
-            <span>今日推荐</span>
-            <span>今日推荐</span>
-            <span>今日推荐</span>
-            <span>今日推荐</span>
-        </scroll-view>
-        <div class="nav-list"></div>
+    <div class="wrap">
+        
     </div>
 </template>
 <script>
 import { mapState,mapActions } from "vuex";
+// import Nav from "../../components/nav/nav";
+
 export default {
     props:{
 
     },
     components:{
-
+       
     },
     data(){
         return {
@@ -43,25 +33,14 @@ export default {
         this.navTabs()
     },
     mounted(){
-        
+        // console.log("navs",this.navs)
     }
 }
 </script>
 <style scoped lang="scss">
     .wrap{
+        width: 100%;
         height: 100%;
-        padding: 10rpx;
-        display: flex;
-        flex-direction:column;
-        .nav{
-            height: 80rpx;
-            background: red;
-            line-height: 80rpx;
-            white-space: nowrap;
-            span{
-                margin-right: 10rpx;
-                display: inline-block;
-            }
-        }
+        background: red;
     }
 </style>

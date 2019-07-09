@@ -1,21 +1,21 @@
-import {navTab} from '@/Api/index'
+import { navTab } from '@/Api/index'
 
-const state={
-    navs:[]
+const state = {
+    navs: []
 }
 const mutations = {
-    getNavTabs(state,payload){
-        state.navs=payload
+    getNavTabs(state, payload) {
+        state.navs = payload
+       
     }
 }
-const actions={
-    async navTabs({commit}){
-        const data=await navTab()
-        
-        commit("getNavTabs",data.result)
+const actions = {
+    async navTabs({commit}) {
+        const data = await navTab()
+        commit("getNavTabs", data.result)
     }
 }
-  export default {
+export default {
     namespaced: true,
     state,
     actions,

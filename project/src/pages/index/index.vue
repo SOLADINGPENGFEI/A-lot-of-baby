@@ -4,7 +4,7 @@
       <!-- 首页搜索导航跳转搜索页面 -->
       <div class="inPut">
         <div class="bigInput">
-          <image src="/static/images/search.png" />
+          <image src="/static/images/search.png" lazy-load="false" />
           <div>请输入商品名称</div>
         </div>
       </div>
@@ -12,19 +12,20 @@
       <Nava></Nava>
       <!-- 轮播图组件 -->
       <SwiperA></SwiperA>
+
       <!-- 首页Banner广告图 -->
       <div class="banner">
         <div class="banOne">
-          <image src />
+          <image />
         </div>
         <div class="banTwo">
-          <image class="one" src />
-          <image class="two" src />
+          <image class="one" />
+          <image class="two" />
         </div>
       </div>
 
       <div class="bigimg">
-        <image src alt />
+        <image alt />
       </div>
       <!--精选好物Dl组件  -->
       <banNer></banNer>
@@ -42,6 +43,8 @@ import banNer from "@/components/banner/banner"; // 精选好物Dl组件
 import loaDing from "@/components/loading/loading"; // 底部加载loading组件
 
 export default {
+  props: {},
+
   data() {
     return {};
   },
@@ -50,6 +53,20 @@ export default {
     SwiperA, // 挂载轮播图组件
     banNer, // 挂载精选好物Dl组件
     loaDing // 挂载底部loding加载组件
+  },
+  computed: {
+    
+  },
+  methods: {
+    ...mapActions({
+      navTabs: "nav/navTabs"
+    })
+  },
+  onShow() {
+    this.navTabs();
+  },
+  mounted() {
+    
   }
 };
 </script>
@@ -77,9 +94,9 @@ export default {
     padding: 0 10px;
     box-sizing: border-box;
     border-radius: 5px;
-    img {
-      width: 15px;
-      height: 15px;
+    image {
+      width: 30px;
+      height: 30px;
       color: #a9adb1;
     }
     div {

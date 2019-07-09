@@ -25,7 +25,11 @@
             </div>
 
             <div class="bigimg">
+<<<<<<< HEAD
                <image src="">
+=======
+               <image src="" alt="">
+>>>>>>> 14984a82ce9b16fb48e2f0f3d66611dbe8768bf6
             </div>
              <!--精选好物Dl组件  --> 
             <banNer></banNer>

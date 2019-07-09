@@ -1,32 +1,22 @@
-<<<<<<< HEAD
 import Vue from 'vue';
 import Vuex from 'vuex'
 
-//挂载modules
+//挂载modules子模块
 import carouse from './modules/carouse'
+import index from './modules/index'
 
 Vue.use(Vuex);
 
-export default new Vuex.Store({
-    modules:{
-        carouse
-=======
-import Vue from 'vue'
-import Vuex from 'vuex'
 import createLogger from 'vuex/dist/logger'
 
-// 引入子模块
-import index from './modules/index'
-
-
-Vue.use(Vuex)
 
 export default new Vuex.Store({
     modules: {
-        index
+        index,
+        carouse
+
     },
     state: {
         
->>>>>>> 14984a82ce9b16fb48e2f0f3d66611dbe8768bf6
     }
 })

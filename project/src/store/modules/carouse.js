@@ -1,9 +1,10 @@
-import { carouse } from '@/Api';
+import { carouse ,dapaiDetail} from '@/Api';
 const state = {
     dapaiData: {},
     summerData: {},
     babytryData:{},
-    eggData:{}
+    eggData:{},
+    dapaiDetailData:{}
 }
 
 const getters = {
@@ -32,6 +33,11 @@ const mutations = {
      upEggData(state, payload) {
         state.eggData = payload.result
         console.log("state.eggData", state.eggData)
+    },
+     //大牌商品详情
+     upDapaiDetailData(state, payload) {
+        state.dapaiDetailData = payload.result
+        console.log("state.dapaiDetailData", state.dapaiDetailData)
     }
 }
 
@@ -56,6 +62,11 @@ const actions = {
      async getEggData({ commit }, payload) {
         const data = await carouse(payload)
         commit("upEggData", data)
+    },
+     //大牌商品详情数据
+     async getDapaiDetailData({ commit }, payload) {
+        const data = await dapaiDetail(payload)
+        commit("upDapaiDetailData", data)
     },
 }
 

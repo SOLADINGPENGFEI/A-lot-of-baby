@@ -1,15 +1,10 @@
 <template>
-<<<<<<< HEAD
-  <div>index</div>
-</template>
-=======
-
- <scroll-view scroll-y>
-  <div class="wrap">
+  <scroll-view scroll-y>
+    <div class="wrap">
               <!-- 首页搜索导航跳转搜索页面 -->
             <div class="inPut">
                 <div class="bigInput">
-                     <image src="/static/images/search.png">
+                     <img src="/static/images/search.png">
                      <div>请输入商品名称</div>
                 </div>
             </div>      
@@ -23,19 +18,19 @@
                     <image src="" />
                 </div>
                 <div class="banTwo">
-                    <image class="one" src="" />
-                    <image class="two" src="" />
+                    <img class="one" src="" />
+                    <img class="two" src="" />
                 </div>
             </div>
 
             <div class="bigimg">
-               <image src="" alt="">
+               <img src="" alt="">
             </div>
              <!--精选好物Dl组件  --> 
             <banNer></banNer>
             <!-- 底部加载loading组件 -->
             <loaDing></loaDing>
-  </div>
+    </div>
   </scroll-view>
 </template>
 
@@ -141,4 +136,4 @@ export default {
 
 
 </style>
->>>>>>> 14984a82ce9b16fb48e2f0f3d66611dbe8768bf6
+

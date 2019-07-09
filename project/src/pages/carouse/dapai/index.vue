@@ -10,7 +10,7 @@
         <div class="center" v-for="(item,i) in dapaiData.anchors[0].products" :key="i"> 
         <ul class="list">
             <li>
-                <dl>
+                <dl @click="clickDl(item.pid)">
                     <dt><img :src="item.mainImgUrl" alt=""></dt>
                     <dd>
                         <div>{{item.title}}</div>
@@ -27,8 +27,6 @@
     </div>
 </template>
 <script>
-//import Carouse from '@/components/carouse.vue';
-
 import store from "@/store";
 import { mapState, mapActions } from "vuex";
 
@@ -45,15 +43,15 @@ export default {
   methods: {
     ...mapActions({
       getDapaiData: "carouse/getDapaiData",
-    })
+    }),
+    clickDl(pid){
+      wx.navigateTo({
+        url: '/pages/carouse/dapai/dapaiDetail/main?pid='+pid
+      });
+    }
   },
- 
   created() {
-    //   if(180){
-    //       this.getDapaiData(180);
-    //   }
     this.getDapaiData(180);
-    //this.getDapaiData(180);
   }
 };
 </script>

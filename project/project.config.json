@@ -1,38 +1,25 @@
 {
-	"description": "项目配置文件。",
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
 	"setting": {
 		"urlCheck": false,
 		"es6": false,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
-<<<<<<< HEAD
 		"autoAudits": false
 	},
-	"miniprogramRoot": "dist/wx/",
 	"compileType": "miniprogram",
+	"libVersion": "2.7.3",
 	"appid": "wx17f5248aa013543d",
 	"projectname": "project",
-=======
-		"coverView": true,
-		"autoAudits": false,
-		"uglifyFileName": true,
-		"checkInvalidKey": true,
-		"checkSiteMap": true,
-		"uploadWithSourceMap": true,
-		"babelSetting": {
-			"ignore": [],
-			"disablePlugins": [],
-			"outputPath": ""
-		}
-	},
 	"miniprogramRoot": "dist/wx/",
-	"compileType": "miniprogram",
-	"appid": "wx53575f9e72f585ce",
-	"projectname": "%E7%94%B5%E5%95%86",
-	"simulatorType": "wechat",
-	"simulatorPluginLibVersion": {},
->>>>>>> 14984a82ce9b16fb48e2f0f3d66611dbe8768bf6
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"scripts": {},
 	"condition": {
 		"search": {
 			"current": -1,
@@ -42,20 +29,15 @@
 			"current": -1,
 			"list": []
 		},
-<<<<<<< HEAD
 		"plugin": {
 			"current": -1,
 			"list": []
 		},
-=======
->>>>>>> 14984a82ce9b16fb48e2f0f3d66611dbe8768bf6
 		"game": {
-			"currentL": -1,
 			"list": []
 		},
 		"miniprogram": {
-<<<<<<< HEAD
-			"current": 2,
+			"current": 3,
 			"list": [
 				{
 					"id": -1,
@@ -72,13 +54,15 @@
 				{
 					"id": -1,
 					"name": "夏季出行专场",
-					"pathName": "pages/carouse/summer/main"
+					"pathName": "pages/carouse/summer/main",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "大牌化妆品专场",
+					"pathName": "pages/carouse/dapai/main"
 				}
 			]
-=======
-			"current": -1,
-			"list": []
->>>>>>> 14984a82ce9b16fb48e2f0f3d66611dbe8768bf6
 		}
 	}
 }

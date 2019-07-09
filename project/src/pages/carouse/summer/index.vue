@@ -1,7 +1,5 @@
 <template>
 <scroll-view class='scroll-view-vertical summer' scroll-y @scroll="viewScroll" @click="2">
-    <!-- <div class="summer"> -->
-      
          <div class="header">
             <img :src="summerData.specialImg" alt="">
             <scroll-view  scroll-x="true" style="width: 100%" class="naveType">

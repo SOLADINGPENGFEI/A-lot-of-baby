@@ -1,7 +1,5 @@
 <script>
 export default {
-<<<<<<< HEAD
-=======
   created () {
     // 调用API从本地缓存中获取数据
     /*
@@ -12,7 +10,6 @@ export default {
      * 支付宝(蚂蚁)：mpvue === my, mpvuePlatform === 'my'
      */
   },
->>>>>>> 14984a82ce9b16fb48e2f0f3d66611dbe8768bf6
 }
 
 </script>

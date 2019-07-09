@@ -1,8 +1,4 @@
-
 import {loading} from '../../Api/index';
-
-console.log('123',loading)
-
 
 const state = {
     getLoading:[]

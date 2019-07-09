@@ -117,16 +117,11 @@ export default {
     box-sizing: border-box;
     border-radius: 5px;
     image {
-      width: 15px;
-      height: 15px;
+      width: 100%;
+      height: 100%;
       color: #a9adb1;
     }
-    div {
-      flex: 1;
-      padding: 0 6px;
-      box-sizing: border-box;
-      color: #a9adb1;
-    }
+    
   }
 }
 .nav {

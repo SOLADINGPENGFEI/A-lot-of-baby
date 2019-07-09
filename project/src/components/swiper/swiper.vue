@@ -1,6 +1,4 @@
 <template>
-  
-     
      <swiper class="lunBo" :indicator-dots="indicatorDots"
   :autoplay="autoplay" :interval="interval" :duration="duration" :circular="circular" >
   <block v-if="getswipe[0].items">

@@ -5,12 +5,7 @@
               <!-- 首页搜索导航跳转搜索页面 -->
             <div class="inPut">
                 <div class="bigInput">
-<<<<<<< HEAD
                      <image src="/static/images/search.png" />
-=======
-                     <image src="/static/images/search.png" alt="" />
-                     <div>请输入商品名称</div>
->>>>>>> 83034eba5840a9173fe7ac03149d57cd264242d9
                 </div>
             </div>      
               <!-- 导航组件 -->
@@ -20,32 +15,15 @@
               <!-- 首页Banner广告图 -->
             <div class="banner">
                 <div class="banOne">
-<<<<<<< HEAD
-                    <image src="" />
-                </div>
-                <div class="banTwo">
-                    <image class="one" src="" />
-                    <image class="two" src="" />
-=======
                    <image :src="getswipe[1].items[0].imgUrl" alt="" />
                 </div>
                 <div class="banTwo">
                     <image class="one" :src="getswipe[1].items[1].imgUrl" />
                     <image class="two" :src="getswipe[1].items[2].imgUrl" />
->>>>>>> 83034eba5840a9173fe7ac03149d57cd264242d9
                 </div>
             </div>
 
             <div class="bigimg">
-<<<<<<< HEAD
-               <image src=""/>
-               <image src=""/>
-            </div>
-             <!--精选好物Dl组件  --> 
-            <banNer></banNer>
-            <!-- 底部加载loading组件 -->
-            <loaDing></loaDing>
-=======
                <image class="imgact" :src="getswipe[0].items[0].imgUrl" alt="" />
             </div>
              <!--精选好物Dl组件第一个使用  --> 
@@ -73,7 +51,6 @@
             <!-- 底部加载loading组件 -->
             <loa-ding></loa-ding> 
            
->>>>>>> 83034eba5840a9173fe7ac03149d57cd264242d9
   </div>
   </scroll-view>
 </template>
@@ -140,10 +117,6 @@ export default {
     box-sizing: border-box;
     border-radius: 5px;
     image {
-<<<<<<< HEAD
-      width: 100%;
-      height: 100%;
-=======
       width: 15px;
       height: 15px;
       color: #a9adb1;
@@ -152,7 +125,6 @@ export default {
       flex: 1;
       padding: 0 6px;
       box-sizing: border-box;
->>>>>>> 83034eba5840a9173fe7ac03149d57cd264242d9
       color: #a9adb1;
     }
   }

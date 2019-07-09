@@ -12,9 +12,6 @@
 		"autoAudits": false,
 		"checkInvalidKey": true
 	},
-	"compileType": "miniprogram",
-	"appid": "wxa112d389bc8929c7",
-	"projectname": "%E9%A9%AC%E4%B8%81%E9%A3%9E%E8%B4%AD%E7%89%A9",
 		"urlCheck": false,
 		"es6": false,
 		"postcss": true,

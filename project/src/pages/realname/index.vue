@@ -16,11 +16,11 @@
                 <label>(图片png、jpg,大小不超过5M)</label>
             </div>
             <div class="files">
-                <div class="img_left">
-                    <image src=""></image>
+                <div class="img_left" @click="uploadFiles">
+                    <image></image>
                 </div>
-                <div class="img_right">
-                    <image src=""></image>
+                <div class="img_right" @click="uploadFiles">
+                    <image></image>
                 </div>
             </div>
         </div>
@@ -42,9 +42,6 @@
 </template>
 <script>
 export default {
-    props:{
-
-    },
     components:{
 
     },
@@ -57,7 +54,15 @@ export default {
 
     },
     methods:{
-
+        uploadFiles() {
+            wx.getFileInfo({
+                filePath: 'string',
+                success(res) {
+                    console.log(res.size)
+                    console.log(res.digest)
+                }
+            })
+        }
     },
     created(){
 

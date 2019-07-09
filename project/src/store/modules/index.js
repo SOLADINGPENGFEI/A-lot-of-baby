@@ -19,8 +19,9 @@ const state = {
 const actions = {
     async createNew(state, ...payload) {
         return new Promise(async (resolve, reject) => {
-            console.log('payload...',JSON.stringify(payload[0]))
-            let result = await newAddress(JSON.stringify(payload[0]))
+            console.log('payload...',payload[0])
+            // let result = await newAddress(JSON.stringify(payload[0]))
+            let result = await newAddress(payload[0])
             resolve(result)
         })
     }

@@ -90,7 +90,6 @@ export default {
             this.current.addressTag = index
         },
         async formSubmit(e) {
-
             // 判断收获人是否为空
             if(!this.current.consignee) {
                 wx.showToast({
@@ -117,6 +116,28 @@ export default {
             }
             let data = await this.createNew(this.current)
             console.log('data...',data)
+            if(data.res_code === 1) {
+                wx.showModal({
+                    title: '温馨提示', //提示的标题
+                    content: data.message, //提示的内容
+                    showCancel: false,
+                    confirmText: '确定', //确定按钮的文字,默认为取消,最多4个字符
+                    confirmColor: '#197DBF', //确定按钮的文字颜色
+                    success: res => {
+                        console.log(res)
+                        if(res.confirm) {
+                            wx.navigateBack({
+                            delta: 1
+                            })
+                        }
+                    }
+                })
+            } else {
+                wx.showModal({
+                    title: 'data.message',
+                    icon: 'fail'
+                })
+            }
         },
         stautsChange() {
             this.checked = !this.checked

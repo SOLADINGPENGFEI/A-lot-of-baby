@@ -1,12 +1,11 @@
 <template>
 
- <scroll-view scroll-y>
+ <scroll-view>
   <div class="wrap">
               <!-- 首页搜索导航跳转搜索页面 -->
             <div class="inPut">
                 <div class="bigInput">
-                     <image src="/static/images/search.png">
-                     <div>请输入商品名称</div>
+                     <image src="/static/images/search.png" />
                 </div>
             </div>      
               <!-- 导航组件 -->
@@ -25,11 +24,8 @@
             </div>
 
             <div class="bigimg">
-<<<<<<< HEAD
-               <image src="">
-=======
-               <image src="" alt="">
->>>>>>> 14984a82ce9b16fb48e2f0f3d66611dbe8768bf6
+               <image src=""/>
+               <image src=""/>
             </div>
              <!--精选好物Dl组件  --> 
             <banNer></banNer>
@@ -83,15 +79,9 @@ export default {
     padding: 0 10px;
     box-sizing: border-box;
     border-radius: 5px;
-    img {
-      width: 15px;
-      height: 15px;
-      color: #a9adb1;
-    }
-    div {
-      flex: 1;
-      padding: 0 6px;
-      box-sizing: border-box;
+    image {
+      width: 100%;
+      height: 100%;
       color: #a9adb1;
     }
   }

@@ -12,10 +12,10 @@
                 <dl>
                     <dt><img :src="item.mainImgUrl" alt=""></dt>
                     <dd>
-                        <div>{{item.title}}</div>
+                        <div class="letter">{{item.title}}</div>
                         <div class="price">
                             <p>￥{{item.salesPrice}}</p>
-                            <p>￥{{item.memberDiscountPrice}}</p>
+                            <p class="small_price">赚￥{{item.memberDiscountPrice}}</p>
                         </div>
                     </dd>
                 </dl>
@@ -67,19 +67,20 @@ export default {
   flex-direction: column;
 
   h2 {
-    height: 40px;
+    height: 30px;
     padding: 15px 0 10px 10px;
     color:red;
+    border:1px solid #eee;
   }
 
   img {
-    height: 250px;
+    height: 225px;
   }
 
   .title {
     height: 75px;
     background: #f3f7f7;
-    line-height: 64px;
+    line-height: 70px;
     text-align: center;
     font-size: 16px;
   }
@@ -101,10 +102,23 @@ export default {
         dd {
           display: flex;
           flex-direction: column;
-          justify-content: center;
+        justify-content: space-between;
+          .letter{
+              height: 50px;
+              overflow: hidden;
+              color:gray;
+              margin-bottom: 25px;
+          }
           .price {
             color: #fc5d7b;
             display: flex;
+            height: 20px;
+            line-height: 20px;
+            .small_price{
+                font-size: 12px;
+                margin-left: 10px;
+                background: pink;
+            }
           }
         }
       }

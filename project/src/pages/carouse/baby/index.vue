@@ -1,15 +1,13 @@
 <template>
-    <div class="summer">
+    <div class="baby">
         <!-- <Carouse :summerData="dapaiData"/> -->
          <div class="header">
             <img :src="babytryData.specialImg" alt="">
             <div class="naveType">
-            <h2 :class="{active:index==navTypeIndex}"
-            v-for="(item,index) in babytryData.anchors" :key="index"
-            @click="click(index)">{{item.anchorDesc}}</h2>
+           <h2>{{babytryData.anchors[0].anchorDesc}}</h2>
 
             </div>
-         <div class="title"></div>   
+         <div class="title">{{babytryData.anchors[0].anchorName}}</div>   
         </div>
         
       
@@ -66,62 +64,58 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.summer {
+.baby {
   width: 100%;
   display: flex;
   flex-direction: column;
-  .naveType {
-    display: flex;
-    flex-wrap: nowrap;
-    h2 {
-      height: 35px;
-      padding: 15px 0 10px 10px;
-    }
-    .active {
-      color: red;
-    }
+
+  h2 {
+    height: 35px;
+    padding: 15px 0 10px 10px;
+    color: red;
   }
+
   img {
-    height: 230px;
+    height: 225px;
   }
 
   .title {
-    height: 75px;
+    height: 65px;
     background: #f3f7f7;
-    line-height: 64px;
+    line-height: 60px;
     text-align: center;
     font-size: 16px;
   }
 }
-.dls{
-   width: 100%;
-   display: flex;
-   justify-content: space-between;
-   flex-shrink: 0;
-   flex-wrap: wrap;
-   dl{
-       width:33.3%;
-       height: 220px;
+.dls {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  dl {
+    width: 33.3%;
+    height: 220px;
     //    text-align: center;
 
-       dt{
-           width: 120px;
-           height: 120px;
-           text-align: center;
-           img{
-              width: 120px;
-              height: 120px;
-              margin-left:3px;
-           }
-       }
-       dd{
-           font-size:12px;
-           color:#666;
-           padding:0 5px;
-           .price{
-               color:orange;
-           }
-       }
-   }
+    dt {
+      width: 120px;
+      height: 120px;
+      text-align: center;
+      img {
+        width: 120px;
+        height: 120px;
+        margin-left: 3px;
+      }
+    }
+    dd {
+      font-size: 12px;
+      color: #666;
+      padding: 0 5px;
+      .price {
+        color: orange;
+      }
+    }
+  }
 }
 </style>

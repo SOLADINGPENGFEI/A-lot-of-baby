@@ -9,7 +9,7 @@
             @click="click(index)">{{item.anchorDesc}}</h2>
 
             </div>
-         <div class="title"></div>   
+         <div class="title">{{summerData.anchors[0].anchorName}}</div>   
         </div>
         
         <div class="center" v-for="(item,i) in summerData.anchors[0].products" :key="i"> 
@@ -18,10 +18,10 @@
                 <dl>
                     <dt><img :src="item.mainImgUrl" alt=""></dt>
                     <dd>
-                        <div>{{item.title}}</div>
+                        <div class="letter">{{item.title}}</div>
                         <div class="price">
                             <p>￥{{item.salesPrice}}</p>
-                            <p>￥{{item.memberDiscountPrice}}</p>
+                            <p class="small_price">赚￥{{item.memberDiscountPrice}}</p>
                         </div>
                     </dd>
                 </dl>
@@ -102,7 +102,7 @@ export default {
       height: 140px;
       padding: 0 10px;
       border-top: 10px solid #f3f7f7;
-      dl {
+       dl {
         display: flex;
         align-items: center;
         img {
@@ -110,13 +110,26 @@ export default {
           height: 120px;
           margin-right: 20px;
         }
-        dd {
+         dd {
           display: flex;
           flex-direction: column;
-          justify-content: center;
+        justify-content: space-between;
+          .letter{
+              height: 50px;
+              overflow: hidden;
+              color:gray;
+              margin-bottom: 25px;
+          }
           .price {
             color: #fc5d7b;
             display: flex;
+            height: 20px;
+            line-height: 20px;
+            .small_price{
+                font-size: 12px;
+                margin-left: 10px;
+                background: pink;
+            }
           }
         }
       }

@@ -1,15 +1,18 @@
 <template>
-  
-     
-     <swiper class="lunBo" :indicator-dots="indicatorDots"
-  :autoplay="autoplay" :interval="interval" :duration="duration" :circular="circular" >
-  <block v-if="getswipe[0].items">
-    <swiper-item class="item" v-for="(item,index) in getswipe && getswipe[0].items" :key="index">
-            <image :src="item.imgUrl" alt="" />
-    </swiper-item>
-  </block>
-</swiper>      
-
+  <swiper
+    class="lunBo"
+    :indicator-dots="indicatorDots"
+    :autoplay="autoplay"
+    :interval="interval"
+    :duration="duration"
+    :circular="circular"
+  >
+    <block v-if="getswipe[0].items">
+      <swiper-item class="item" v-for="(item,index) in getswipe && getswipe[0].items" :key="index">
+        <image :src="item.imgUrl" alt />
+      </swiper-item>
+    </block>
+  </swiper>
 </template>
 
 <script>
@@ -38,7 +41,6 @@ export default {
   },
   onShow() {
     this.getswiper();
-    
   }
 };
 </script>
@@ -48,11 +50,10 @@ export default {
   width: 100%;
   height: 150px;
   background: #fff;
-  margin-top: 5px;
+  margin-top: 10px;
   image {
     width: 100%;
     height: 100%;
-
   }
 }
 </style>

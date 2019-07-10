@@ -17,10 +17,10 @@
             </div>
             <div class="files">
                 <div class="img_left" @click="uploadFiles">
-                    <image></image>
+                    
                 </div>
                 <div class="img_right" @click="uploadFiles">
-                    <image></image>
+                    
                 </div>
             </div>
         </div>

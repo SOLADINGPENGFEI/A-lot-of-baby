@@ -8,13 +8,14 @@ export let newAddress = params => {
 export let order = params => {
     return request.post('/api/open/order/query/1.0.0',params)
 }
-
-
-//  首页nav接口
+//  首页nav切换接口
 export let navTab=params=>{
     return request.post("/api/open/product/category/query/1.0.0")
 }
-
+//  首页nav接口
+export let navData=params=>{
+    return request.post("/api/open/product/category/sub/1",{parentId:0})
+}
 
  // 首页 swiper dl 基本渲染接口
 export let getSwiper=params=>{

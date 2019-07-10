@@ -70,7 +70,10 @@ export default {
   methods: {
     ...mapActions({
       getswiper: "Swiper/swipers"
-    })
+    }),
+     ...mapActions({
+      DataNav: "nav/DataNav"
+    }),
   },
   computed: {
     ...mapState({
@@ -80,6 +83,7 @@ export default {
   },
   onShow() {
     this.getswiper();
+    this.DataNav()
   }
 };
 </script>

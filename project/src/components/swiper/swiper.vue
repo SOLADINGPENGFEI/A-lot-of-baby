@@ -36,7 +36,6 @@ export default {
   },
   onShow() {
     this.getswiper();
-    
   }
 };
 </script>

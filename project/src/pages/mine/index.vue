@@ -58,7 +58,7 @@
   </div>
 </template>
 <script>
-import {mapState} from 'vuex'
+import { mapState } from 'vuex'
 export default {
   data(){
     return {
@@ -70,10 +70,10 @@ export default {
     }
   },
   computed:{
-      
+     
   },
   methods:{
-      obligation(i) {
+      obligation(index) {
         wx.navigateTo({
           url:'/pages/obligation/main'
         })

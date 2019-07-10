@@ -1,4 +1,5 @@
 import {newAddress,order} from '@/Api/index'
+const moment = require('moment')
 
 const state = {
     current: {
@@ -14,8 +15,8 @@ const state = {
         addressTag:null,
         state:null
     },
-    orderStatus: 0,
-    data: null,
+    orderStatus: 1,
+    list: [],
     ind: 1
 }
 
@@ -30,14 +31,23 @@ const actions = {
         })
     },
     //获取订单数据
-    async getOrder(state, payload) {
+    getOrder({commit,state}, payload) {
         return new Promise(async (resolve, reject) => {
-            console.log('payload-status...',payload)
-            state.data = await order(payload)
-            console.log('data...',state.data.result)
-            resolve(state.data.result)
+            let params = {}
+            params.orderStatus = state.orderStatus
+            params.pageIndex = 1
+            let result = await order(params)
+            console.log('result...',result)
+            result.result.forEach(item => {
+                item.createTime = formatTime(item.createTime)
+            })
+
+            commit('updateOrderData',{list:{...state.list,...result},index:state.orderStatus})
+
+            resolve()
         })
     }
+    
 }
 
 const mutations = {
@@ -45,10 +55,17 @@ const mutations = {
     updateState(state, payload) {
         state.current = {...state.current, ...payload}
     },
-     //获取订单数据
-    // getOrderData(state, payload) {
-    //     state.data = {...state.data, ...payload}
-    // }
+    // 获取订单数据
+    updateOrderData(state, payload) {
+        console.log('updateOrderData...',payload)
+        state.orderStatus = payload.orderStatus
+        state.list = payload.list.result
+        
+    }
+}
+
+function formatTime(createTime) {
+    return moment(createTime * 1).format('YYYY-MM-DD HH:mm')
 }
 
 export default {

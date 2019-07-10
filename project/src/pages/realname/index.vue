@@ -16,11 +16,11 @@
                 <label>(图片png、jpg,大小不超过5M)</label>
             </div>
             <div class="files">
-                <div class="img_left" @click="uploadFiles">
-                    <image></image>
+                <div class="img_left" @click="uploadFrontImage">
+                    <image :src="FrontImage"></image>
                 </div>
-                <div class="img_right" @click="uploadFiles">
-                    <image></image>
+                <div class="img_right" @click="uploadBehindImage">
+                    <image :src="BehindImage"></image>
                 </div>
             </div>
         </div>
@@ -47,19 +47,39 @@ export default {
     },
     data(){
         return {
-
+            FrontImage: '',
+            BehindImage: ''
         }
     },
     computed:{
 
     },
     methods:{
-        uploadFiles() {
-            wx.getFileInfo({
-                filePath: 'string',
-                success(res) {
-                    console.log(res.size)
-                    console.log(res.digest)
+        uploadFrontImage() {
+            let that = this
+            wx.chooseImage({
+                success: function(res) {
+                    const tempFilePaths = res.tempFilePaths
+                    wx.saveFile({
+                        tempFilePath: tempFilePaths[0],
+                        success (res) {
+                            that.FrontImage = res.savedFilePath
+                        }
+                    })
+                }
+            })
+        },
+        uploadBehindImage() {
+             let that = this
+            wx.chooseImage({
+                success: function(res) {
+                    const tempFilePaths = res.tempFilePaths
+                    wx.saveFile({
+                        tempFilePath: tempFilePaths[0],
+                        success (res) {
+                            that.BehindImage = res.savedFilePath
+                        }
+                    })
                 }
             })
         }

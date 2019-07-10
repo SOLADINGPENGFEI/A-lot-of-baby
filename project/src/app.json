@@ -1,11 +1,9 @@
 {
   "pages": [
     "pages/index/main",
+    "pages/search/main",
     "pages/carouse/main",
     "pages/carouse/everyDetail/main",
-    
-    "pages/logs/main",
-    
     "pages/mine/main",
     "pages/obligation/main",
     "pages/coupon/main",
@@ -13,6 +11,7 @@
     "pages/CustomerService/main",
     "pages/realname/main",
     "pages/newaddress/main"
+   
   ],
   "window": {
     "backgroundTextStyle": "light",

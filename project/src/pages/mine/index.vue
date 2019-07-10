@@ -4,11 +4,11 @@
         <image class="bgImg" src="/static/images/logBg.png"></image>
         <div class="user">
             <div class="user-head">
-                <image></image>
+                <image :src="userData.headUrl"></image>
             </div>
             <div class="user-msg">
-                <div class="user-name"> *** </div>
-                <p>邀请码: ******
+                <div class="user-name">{{userData.nickName}}</div>
+                <p>邀请码: {{userData.inviteCode}}
                   <span>复制</span>
                 </p>
             </div>
@@ -19,6 +19,7 @@
               <h3>我的订单</h3>
               <div class="order-status">
                   <span @click="obligation(index)" v-for="(item,index) in navStatus" :key='index'>
+                      <span class='tip'></span>
                       <image :src='item.img'></image>
                       <p>{{item.txt}}</p>
                   </span>
@@ -58,7 +59,7 @@
   </div>
 </template>
 <script>
-import {mapState} from 'vuex'
+import { mapState,mapActions,mapMutations } from 'vuex'
 export default {
   data(){
     return {
@@ -70,10 +71,19 @@ export default {
     }
   },
   computed:{
-      
+     ...mapState({
+       userData: state => state.index.userData
+     })
+     
   },
   methods:{
-      obligation(i) {
+      ...mapActions({
+        getUser: 'index/getUser'
+      }),
+      ...mapMutations({
+        updateUser: 'index/updateUser'
+      }),
+      obligation(index) {
         wx.navigateTo({
           url:'/pages/obligation/main'
         })
@@ -99,8 +109,12 @@ export default {
         })
       }
   },
+  onShow() {
+    this.getUser()
+    this.updateUser()
+  },
   created(){
-
+    
   },
   mounted(){
 
@@ -138,9 +152,12 @@ export default {
             margin:38rpx;
             border-radius:50%;
             background: #fff;
+            overflow:hidden;
             image {
+              width: 100%;
+              height: 100%;
               display:inline-block;
-              overflow:hidden;
+              
             }
           }
           .user-msg {
@@ -189,6 +206,20 @@ export default {
               justify-content:space-around;
               span {
                 position: relative;
+                .tip {
+                  position:absolute;
+                  left:60rpx;
+                  top:-10rpx;
+                  padding:2rpx;
+                  font-size:24rpx;
+                  border:2rpx solid #fc5d7b;
+                  border-radius:50%;
+                  color:#fc5d7b;
+                  width:30rpx;
+                  height:30rpx;
+                  text-align:center;
+                  line-height:30rpx;
+                }
                 image {
                   width: 40px;
                   height: 40px;

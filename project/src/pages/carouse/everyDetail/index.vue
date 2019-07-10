@@ -37,7 +37,7 @@
           <div></div>
           <p class="sureBtn">确定</p>
         </div>
-        <div  v-if="dailogShow" class="big">
+        <div v-if="dailogShow" class="big" @click="delDailog">
 
         </div>
     </div>
@@ -73,6 +73,9 @@ export default {
     //弹框
     dailog() {
       this.dailogShow = true;
+    },
+    delDailog(){
+      this.dailogShow = false;
     }
   },
   mounted() {
@@ -112,6 +115,7 @@ z-index: 50;
   position: relative;
   display: flex;
   flex-direction: column;
+  
   z-index: 1;
   .dailog {
     width: 100%;
@@ -127,7 +131,7 @@ z-index: 50;
       width: 100%;
       flex: 1;
     }
-    .sureBtn {
+      .sureBtn {
       height: 55px;
       line-height: 55px;
       text-align: center;
@@ -135,6 +139,16 @@ z-index: 50;
       border-radius: 10px;
       background: linear-gradient(217deg, #f86367, #fb2579);
     }
+    }
+     .storeDetail{
+      width:100%;
+      img{
+        width:100%;
+      }
+      img:last-child{
+        height:800px;
+      }
+  
   }
   scroll-view,
   .content {
@@ -227,13 +241,15 @@ z-index: 50;
 .banner {
   position: relative;
   height: 360px;
-
+  width: 100%;
   swiper {
+    width: 100%;
     height: 100%;
     swiper-item {
       height: 100%;
-
+      width: 100%;
       img {
+        width: 100%;
         height: 100%;
       }
     }

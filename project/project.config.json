@@ -5,25 +5,11 @@
 	},
 	"setting": {
 		"urlCheck": false,
-		"es6": true,
-		"postcss": false,
-		"minified": false,
+		"es6": false,
+		"postcss": true,
+		"minified": true,
 		"newFeature": true,
-<<<<<<< HEAD
 		"autoAudits": false
-=======
-		"coverView": true,
-		"autoAudits": false,
-		"uglifyFileName": false,
-		"checkInvalidKey": true,
-		"checkSiteMap": true,
-		"uploadWithSourceMap": true,
-		"babelSetting": {
-			"ignore": [],
-			"disablePlugins": [],
-			"outputPath": ""
-		}
->>>>>>> 81d1e4869ac380fe6dd1575d9db5607d57d95852
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.7.3",
@@ -51,46 +37,13 @@
 			"list": []
 		},
 		"miniprogram": {
-<<<<<<< HEAD
-			"current": 4,
-			"list": [
-				{
-					"id": -1,
-					"name": "宝宝蛋专场",
-					"pathName": "pages/carouse/egg/main",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "蓓臣Babytry专场",
-					"pathName": "pages/carouse/baby/main",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "夏季出行专场",
-					"pathName": "pages/carouse/summer/main",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "大牌化妆品专场",
-					"pathName": "pages/carouse/dapai/main",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "大牌详情",
-					"pathName": "pages/carouse/dapai/dapaiDetail/main"
-=======
 			"current": 0,
 			"list": [
 				{
 					"id": -1,
-					"name": "添加地址页面",
-					"pathName": "pages/newaddress/main",
-					"scene": null
->>>>>>> 81d1e4869ac380fe6dd1575d9db5607d57d95852
+					"name": "大牌详情",
+					"pathName": "pages/carouse/main",
+					"query": ""
 				}
 			]
 		}

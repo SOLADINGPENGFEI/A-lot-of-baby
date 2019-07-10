@@ -3,7 +3,7 @@
   :autoplay="autoplay" :interval="interval" :duration="duration" :circular="circular" >
   <block v-if="getswipe[0].items">
     <swiper-item class="item" v-for="(item,index) in getswipe && getswipe[0].items" :key="index">
-            <image :src="item.imgUrl" alt="" @click="toDetail(index)" />
+            <image :src="item.imgUrl" alt="" @click="toDetail(siid[index])" />
     </swiper-item>
   </block>
 </swiper>      
@@ -19,31 +19,39 @@ export default {
       indicatorDots: true,
       autoplay: true,
       interval: 5000,
-      duration: 1000
+      duration: 1000,
+      siid:[180,182,186,181]
     };
   },
   methods: {
     ...mapActions({
-      getswiper: "Swiper/swipers"
+      getswiper: "Swiper/swipers",
+      //getDapaiData: "carouse/getDapaiData",
     }),
-    toDetail(i){
-      if(i==0){
-        wx.navigateTo({
-          url:'/pages/carouse/dapai/main'
-        })
-      }else if(i==1){
-         wx.navigateTo({
-          url:'/pages/carouse/summer/main'
-        })
-      }else if(i==2){
-        wx.navigateTo({
-          url:'/pages/carouse/baby/main'
-        })
-      }else if(i==3){
-         wx.navigateTo({
-          url:'/pages/carouse/egg/main'
-        })
-      }
+    toDetail(siid){
+      console.log('siid...',siid)
+      wx.navigateTo({
+          url:'/pages/carouse/main?siid='+siid
+      })
+
+      //this.getDapaiData(180);
+      // if(i==0){
+      //   wx.navigateTo({
+      //     url:'/pages/carouse/dapai/main'
+      //   })
+      // }else if(i==1){
+      //    wx.navigateTo({
+      //     url:'/pages/carouse/summer/main'
+      //   })
+      // }else if(i==2){
+      //   wx.navigateTo({
+      //     url:'/pages/carouse/baby/main'
+      //   })
+      // }else if(i==3){
+      //    wx.navigateTo({
+      //     url:'/pages/carouse/egg/main'
+      //   })
+      // }
     }
   },
   computed: {
@@ -55,6 +63,9 @@ export default {
   onShow() {
     this.getswiper();
     
+  },
+  mounted(){
+    console.log('getswipe...',this.getswipe)
   }
 };
 </script>

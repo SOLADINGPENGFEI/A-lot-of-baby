@@ -1,14 +1,14 @@
 <template>
-<scroll-view class='scroll-view-vertical summer' scroll-y @scroll="viewScroll" @click="2">
-         <div class="header">
-            <img :src="summerData.specialImg" alt="">
+  <scroll-view class='scroll-view-vertical summer' scroll-y @scroll="viewScroll" @click="2">
+      <div class="header">
+          <img :src="summerData.specialImg" alt="">
             <scroll-view  scroll-x="true" style="width: 100%" class="naveType">
                <div :class="{'audio_fixed':top > 225}">
               <h2 :class="{active:index==navTypeIndex}"
               v-for="(item,index) in summerData.anchors" :key="index"
               @click="click(index)">{{item.anchorDesc}}</h2>
-               </div>
-            </scroll-view>
+      </div>
+  </scroll-view>
          <div class="title">{{summerData.anchors[0].anchorName}}</div>   
         </div>
         <div class="center" v-for="(item,i) in summerData.anchors[0].products" :key="i"> 

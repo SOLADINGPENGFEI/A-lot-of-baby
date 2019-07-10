@@ -33,25 +33,6 @@ export default {
       wx.navigateTo({
           url:'/pages/carouse/main?siid='+siid
       })
-
-      //this.getDapaiData(180);
-      // if(i==0){
-      //   wx.navigateTo({
-      //     url:'/pages/carouse/dapai/main'
-      //   })
-      // }else if(i==1){
-      //    wx.navigateTo({
-      //     url:'/pages/carouse/summer/main'
-      //   })
-      // }else if(i==2){
-      //   wx.navigateTo({
-      //     url:'/pages/carouse/baby/main'
-      //   })
-      // }else if(i==3){
-      //    wx.navigateTo({
-      //     url:'/pages/carouse/egg/main'
-      //   })
-      // }
     }
   },
   computed: {

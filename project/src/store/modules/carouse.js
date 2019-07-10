@@ -1,10 +1,9 @@
-import { carouse ,dapaiDetail} from '@/Api';
+import { carouse ,dapaiDetail,storeDetail,postage} from '@/Api';
 const state = {
     dapaiData: {},
-    // summerData: {},
-    // babytryData:{},
-    // eggData:{},
-    dapaiDetailData:{}
+    dapaiDetailData:{},
+    storeDetailData:{},
+    postageData:{}
 }
 
 const getters = {
@@ -19,25 +18,20 @@ const mutations = {
         state.dapaiData = payload.result
         console.log("state.dapaiData", state.dapaiData)
     },
-    // //夏季出行专场
-    // upSummerData(state, payload) {
-    //     state.summerData = payload.result
-    //     console.log("state.summerData", state.summerData)
-    // },
-    // //babytry专场
-    // upBabytryData(state, payload) {
-    //     state.babytryData = payload.result
-    //     console.log("state.babytryData", state.babytryData)
-    // },
-    //  //宝宝蛋专场
-    //  upEggData(state, payload) {
-    //     state.eggData = payload.result
-    //     console.log("state.eggData", state.eggData)
-    // },
      //大牌商品详情
      upDapaiDetailData(state, payload) {
         state.dapaiDetailData = payload.result
         console.log("state.dapaiDetailData", state.dapaiDetailData)
+    },
+    //产品详情
+    upStoreDetailData(state,payload){
+        state.storeDetailData=payload
+        console.log("state.storeDetailData",state.storeDetailData)
+    },
+    //详情是否包邮
+    upPostageData(state,payload){
+        state.postageData=payload
+        console.log("state.postageData",state.postageData)
     }
 }
 
@@ -48,26 +42,23 @@ const actions = {
         const data = await carouse(payload)
         commit("upDapaiData", data)
     },
-    // //夏季出行专场数据
-    // async getSummerData({ commit }, payload) {
-    //     const data = await carouse(payload)
-    //     commit("upSummerData", data)
-    // },
-    // //babytry专场数据
-    //  async getBabytryData({ commit }, payload) {
-    //     const data = await carouse(payload)
-    //     commit("upBabytryData", data)
-    // },
-    // //宝宝蛋专场数据
-    //  async getEggData({ commit }, payload) {
-    //     const data = await carouse(payload)
-    //     commit("upEggData", data)
-    // },
      //大牌商品详情数据
      async getDapaiDetailData({ commit }, payload) {
         const data = await dapaiDetail(payload)
         commit("upDapaiDetailData", data)
     },
+    //产品详情
+    async getStoreDetailData({commit},payload){
+        console.log("payload。。。。。",payload)
+        const data=await storeDetail(payload)
+        commit("upStoreDetailData",data)
+    },
+    //详情是否包邮
+    async getPostageData({commit},payload){
+        console.log("payload。。。。。",payload)
+        const data=await postage(payload)
+        commit("upPostageData",data)
+    }
 }
 
 export default {

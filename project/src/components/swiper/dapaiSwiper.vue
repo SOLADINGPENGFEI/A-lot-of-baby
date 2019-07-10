@@ -33,12 +33,8 @@ export default {
       index: 0
     };
   },
-  mounted(){
-      console.log('props',this.props)
-  },
   methods: {
     change(e) {
-      console.log(e.target.current);
       this.index = e.target.current + 1;
     }
   }

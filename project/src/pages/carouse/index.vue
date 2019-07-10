@@ -11,7 +11,15 @@
               @click="click(index)">{{item.anchorDesc}}</h2>
             </scroll-view> -->
             <h2>{{dapaiData.anchors[0].anchorDesc}}</h2>
-         <div class="title">{{dapaiData.anchors[0].anchorName}}</div>   
+         <div class="title">
+           <p>
+             <span class="line_left"></span><span class="left_dot"></span>
+           </p>
+           {{dapaiData.anchors[0].anchorName}}
+           <p>
+             <span class="right_dot"></span><span class="line_right"></span>
+           </p>
+          </div>   
         </div>
 
         <div :class="[id==186?'dl_x':'dl_y']" > 
@@ -38,8 +46,8 @@ export default {
   data() {
     return {
       id: 0,
-      scrollX:false,
-      navTypeIndex:0
+      scrollX: false,
+      navTypeIndex: 0
     };
   },
   computed: {
@@ -58,17 +66,19 @@ export default {
     },
     click(i) {
       this.navTypeIndex = i;
-      console.log(this.navTypeIndex)
-    },
+      console.log(this.navTypeIndex);
+    }
   },
   onLoad(options) {
     let siid = options.siid;
-    this.getDapaiData(siid);
+    this.getDapaiData({
+      siid
+    });
     this.id = siid;
-    if(this.id==181){
-      this.scrollX=true
-    }else{
-      this.scrollX=false
+    if (this.id == 181) {
+      this.scrollX = true;
+    } else {
+      this.scrollX = false;
     }
   }
 };
@@ -78,7 +88,7 @@ export default {
   width: 100%;
   display: flex;
   flex-direction: column;
-    .naveType {
+  .naveType {
     width: 100%;
     height: 50px;
     display: flex;
@@ -112,10 +122,29 @@ export default {
     line-height: 70px;
     text-align: center;
     font-size: 16px;
+    display: flex;
+    justify-content: center;
+    .line_left,
+    .line_right {
+      display: inline-block;
+      width: 68rpx;
+      height: 2rpx;
+      background: #484848;
+      margin: 72rpx 0 0;
+    }
+    .left_dot,
+    .right_dot {
+      display: inline-block;
+      width: 14rpx;
+      height: 14rpx;
+      background: #484848;
+      margin: 66rpx 0 0;
+      transform: rotate(45deg);
+    }
   }
 }
 .dl_y {
- flex:1;
+  flex: 1;
   padding: 0 10px;
   border-top: 10px solid #f3f7f7;
   dl {
@@ -153,7 +182,7 @@ export default {
 
 .dl_x {
   width: 100%;
-  flex:1;
+  flex: 1;
   display: flex;
   justify-content: space-between;
   flex-shrink: 0;

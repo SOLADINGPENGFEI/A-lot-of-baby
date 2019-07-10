@@ -1,9 +1,5 @@
 
 import {loading} from '../../Api/index';
-
-console.log('123',loading)
-
-
 const state = {
     getLoading:[]
 }
@@ -18,9 +14,7 @@ const actions ={
 
 const mutations = {
     getload(state,payload){
-           console.log('act',payload)
         state.getLoading = payload
-        // console.log('act',payload)
     }
 
 }

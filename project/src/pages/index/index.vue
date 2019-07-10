@@ -1,70 +1,49 @@
 <template>
   <scroll-view scroll-y>
-    <div class="wrap">
-      <!-- 首页搜索导航跳转搜索页面 -->
+    <div class="wrap" v-if="getswipe">
+        <!-- 首页搜索导航跳转搜索页面 -->
       <div class="inPut">
-        <div class="bigInput">
-          <image src="/static/images/search.png" lazy-load="false" />
-          <div>请输入商品名称</div>
-        </div>
+          <div class="bigInput">
+                <image src="/static/images/search.png" />
+          </div>
+      </div>      
+        <!-- 导航组件 -->
+        <Nava></Nava>  
+        <!-- 轮播图组件 -->
+        <SwiperA></SwiperA>
+        <!-- 首页Banner广告图 -->
+      <div class="banner" >
+          <div class="banOne">
+              <image :src="getswipe[1].items[0].imgUrl" alt="" />
+          </div>
+          <div class="banTwo">
+              <image class="one" :src="getswipe[1].items[1].imgUrl" />
+              <image class="two" :src="getswipe[1].items[2].imgUrl" />
+          </div>
       </div>
-      <!-- 导航组件 -->
-      <Nava></Nava>
-      <!-- 轮播图组件 -->
-      <SwiperA></SwiperA>
-
- <scroll-view>
-  <div class="wrap">
-              <!-- 首页搜索导航跳转搜索页面 -->
-            <div class="inPut">
-                <div class="bigInput">
-                     <image src="/static/images/search.png" />
-                </div>
-            </div>      
-              <!-- 导航组件 -->
-              <Nava></Nava>  
-              <!-- 轮播图组件 -->
-              <SwiperA></SwiperA>
-              <!-- 首页Banner广告图 -->
-            <div class="banner">
-                <div class="banOne">
-                   <image :src="getswipe[1].items[0].imgUrl" alt="" />
-                </div>
-                <div class="banTwo">
-                    <image class="one" :src="getswipe[1].items[1].imgUrl" />
-                    <image class="two" :src="getswipe[1].items[2].imgUrl" />
-                </div>
-            </div>
-
-            <div class="bigimg">
-               <image class="imgact" :src="getswipe[0].items[0].imgUrl" alt="" />
-            </div>
-             <!--精选好物Dl组件第一个使用  --> 
-            <ban-ner :dataSwiper="getswipe[4].items"></ban-ner>
-
-            <div class="bigimg">
-               <image class="imgact" :src="getswipe[0].items[1].imgUrl" alt="" />
-            </div>
-
-              <!--精选好物Dl组件第二个使用  --> 
-            <ban-ner :dataSwiper="getswipe[6].items"></ban-ner>
-
-            <div class="bigimg">
-               <image class="imgact" :src="getswipe[0].items[2].imgUrl" alt="" />
-            </div>
-            <!--精选好物Dl组件第三个使用  --> 
-             <ban-ner :dataSwiper="getswipe[8].items"></ban-ner>
-
-             <div class="bigimg">
-               <image class="imgact" :src="getswipe[0].items[3].imgUrl" alt="" />
-            </div>
-              <!--精选好物Dl组件第四个使用  --> 
-             <ban-ner :dataSwiper="getswipe[10].items"></ban-ner>
-
-            <!-- 底部加载loading组件 -->
-            <loa-ding></loa-ding> 
-           
-  </div>
+      <div class="bigimg">
+          <image class="imgact" :src="getswipe[0].items[0].imgUrl" alt="" />
+      </div>
+        <!--精选好物Dl组件第一个使用  --> 
+      <ban-ner :dataSwiper="getswipe[4].items"></ban-ner>
+      <div class="bigimg">
+          <image class="imgact" :src="getswipe[0].items[1].imgUrl" alt="" />
+      </div>
+        <!--精选好物Dl组件第二个使用  --> 
+      <ban-ner :dataSwiper="getswipe[6].items"></ban-ner>
+      <div class="bigimg">
+          <image class="imgact" :src="getswipe[0].items[2].imgUrl" alt="" />
+      </div>
+      <!--精选好物Dl组件第三个使用  --> 
+      <ban-ner :dataSwiper="getswipe[8].items"></ban-ner>
+      <div class="bigimg">
+          <image class="imgact" :src="getswipe[0].items[3].imgUrl" alt="" />
+      </div>
+        <!--精选好物Dl组件第四个使用  --> 
+      <ban-ner :dataSwiper="getswipe[10].items"></ban-ner>
+      <!-- 底部加载loading组件 -->
+      <loa-ding></loa-ding> 
+    </div>
   </scroll-view>
 </template>
 <script>
@@ -129,8 +108,8 @@ export default {
     box-sizing: border-box;
     border-radius: 5px;
     image {
-      width: 15px;
-      height: 15px;
+      width: 100%;
+      height: 100%;
       color: #a9adb1;
     }
     div {
@@ -165,16 +144,17 @@ export default {
     width: 60%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     .one {
       width: 100%;
-      height: 48%;
+      height: 49%;
       background: salmon;
       margin-bottom: 3px;
       border-radius: 5px;
     }
     .two {
       width: 100%;
-      height: 50%;
+      height: 49%;
       background: sandybrown;
       border-radius: 5px;
     }

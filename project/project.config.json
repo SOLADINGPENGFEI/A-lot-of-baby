@@ -1,10 +1,13 @@
 {
-	"description": "项目配置文件。",
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
 	"setting": {
 		"urlCheck": false,
 		"es6": false,
-		"postcss": false,
-		"minified": false,
+		"postcss": true,
+		"minified": true,
 		"newFeature": true,
 		"autoAudits": false,
 		"uglifyFileName": false,
@@ -17,13 +20,17 @@
 			"disablePlugins": [],
 			"outputPath": ""
 		}
+		
 	},
-	"miniprogramRoot": "dist/wx/",
 	"compileType": "miniprogram",
-	"appid": "wx53575f9e72f585ce",
-	"projectname": "%E7%94%B5%E5%95%86",
-	"simulatorType": "wechat",
-	"simulatorPluginLibVersion": {},
+	"libVersion": "2.7.3",
+	"appid": "wx17f5248aa013543d",
+	"projectname": "project",
+	"miniprogramRoot": "dist/wx/",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"scripts": {},
 	"condition": {
 		"search": {
 			"current": -1,
@@ -38,7 +45,6 @@
 			"list": []
 		},
 		"game": {
-			"currentL": -1,
 			"list": []
 		},
 		"miniprogram": {
@@ -62,7 +68,8 @@
 					"id": -1,
 					"name": "首页",
 					"pathName": "pages/index/main",
-					"scene": null
+					"scene": null,
+					"query": ""
 				}
 			]
 		}

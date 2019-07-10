@@ -2,6 +2,8 @@
   "pages": [
     "pages/index/main",
     "pages/search/main",
+    "pages/carouse/main",
+    "pages/carouse/everyDetail/main",
     "pages/mine/main",
     "pages/obligation/main",
     "pages/coupon/main",
@@ -22,7 +24,6 @@
     "backgroundColor": "#fafafa",
     "selectedColor": "#333",
     "borderStyle": "white",
-
     "list": [{
       "text": "首页",
       "pagePath": "pages/index/main",

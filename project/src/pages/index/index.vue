@@ -5,7 +5,7 @@
               <!-- 首页搜索导航跳转搜索页面 -->
             <div class="inPut">
                 <div class="bigInput">
-                     <image src="/static/images/search.png" />
+                     <image @click="btnSearch" src="/static/images/search.png" />
                 </div>
             </div>      
               <!-- 导航组件 -->
@@ -77,8 +77,15 @@ export default {
   methods: {
     ...mapActions({
       getswiper: "Swiper/swipers"
-    })
+    }),
+     
+     btnSearch(){
+        wx.navigateTo({ url: '/pages/search/main' });
+     }
+
   },
+
+
   computed: {
     ...mapState({
       // 把vuex数据赋给变量名
@@ -86,7 +93,7 @@ export default {
     })
   },
   onShow() {
-    this.getswiper();
+    this.getswiper(1);
   }
 };
 </script>
@@ -104,9 +111,7 @@ export default {
 .inPut {
   width: 100%;
   height: 44px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
   .bigInput {
     width: 98%;
     height: 35px;
@@ -117,8 +122,8 @@ export default {
     box-sizing: border-box;
     border-radius: 5px;
     image {
-      width: 15px;
-      height: 15px;
+      width:100%;
+      height: 100%;
       color: #a9adb1;
     }
     div {
@@ -153,6 +158,7 @@ export default {
     width: 60%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     .one {
       width: 100%;
       height: 48%;

@@ -42,12 +42,26 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": 2,
 			"list": [
 				{
 					"id": -1,
 					"name": "添加地址页面",
 					"pathName": "pages/newaddress/main",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "搜索页面",
+					"pathName": "pages/search/main",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "首页",
+					"pathName": "pages/index/main",
 					"scene": null
 				}
 			]

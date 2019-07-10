@@ -1,6 +1,6 @@
 <template>
  <div class="topbar">
-<scroll-view class="scroll-view_H" scroll-x style="width: 100%">
+<scroll-view v-if="navlist" class="scroll-view_H" scroll-x style="width: 100%">
          <view class="active">今日推荐</view>
          <view v-for="(item,index) in navlist" :key="index">{{item.cname}}</view>                  
       </scroll-view>

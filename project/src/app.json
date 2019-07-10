@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/index/main",
+    "pages/search/main",
     "pages/mine/main",
     "pages/obligation/main",
     "pages/coupon/main",
@@ -8,6 +9,7 @@
     "pages/CustomerService/main",
     "pages/realname/main",
     "pages/newaddress/main"
+   
   ],
   "window": {
     "backgroundTextStyle": "light",

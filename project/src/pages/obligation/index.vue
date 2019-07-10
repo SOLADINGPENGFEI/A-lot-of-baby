@@ -6,7 +6,7 @@
         </div>
         <div class="main">
             <div class="unorder">
-                <image src="/static/images/wudingdan.png"></image>
+                <image src="/static/images/wudingdan.png" />
                 <p>暂时没有订单┗|｀O′|┛ 嗷~~</p>
             </div>
             <div class="list">
@@ -18,7 +18,7 @@
                     </div>
                     <div class="product-msg">
                         <div class="left">
-                            <image :src="item.products[0].mainImgUrl"></image>
+                            <image :src="item.products[0].mainImgUrl" />
                         </div>
                         <div class="right">
                             <h3>{{item.products[0].productTitle}}</h3>

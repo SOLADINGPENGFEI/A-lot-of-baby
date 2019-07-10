@@ -7,21 +7,21 @@
                </div>
                <div>更多 》</div>
             </div>
-    <div class="loading">
+    <div class="loading" v-if="getLoading">
           <dl v-for="(item,index) in getLoading" :key="index">
               <dt>
                   <image :src="item.productVo.mainImgUrl" alt="" />
               </dt>
               <dd>
-                  <p>四川车厘子新鲜水果特价销售不好不要钱啊是大啊是大</p>
+                  <p>{{item.productVo.title}}</p>
                   <div class="act">
                       <span>包邮</span>
                       <span>包税</span>
                   </div>
                   <div class="att">
-                    <h2>￥25.5</h2>
-                    <span class="atta">￥21.68</span>
-                    <span class="attb">赚￥3.82</span>
+                    <h2>￥{{item.productVo.salesPrice}}</h2>
+                    <span class="atta">￥{{item.productVo.supplyPrice}}</span>
+                    <span class="attb">赚￥{{item.productVo.vipPrice}}</span>
                   </div>
               </dd>
           </dl>
@@ -37,7 +37,9 @@ import { mapActions, mapState } from "vuex";
 
 export default {
   data() {
-    return {};
+    return {
+      pageIndex:1
+    };
   },
 
   methods: {
@@ -53,8 +55,22 @@ export default {
   },
 
   created() {
-    this.loadings();
-  }
+    this.loadings(this.pageIndex);
+  },
+
+    onReachBottom () {//上拉加载
+        this.pageIndex = this.pageIndex+1;
+        if(this.pageIndex > 4){
+           console.log('我是底线的')
+        }else{
+          this.loadings(this.pageIndex);
+        }
+    },
+
+     onPullDownRefresh () {
+        console.log('下拉刷新')
+   
+    },
 };
 </script>
 
@@ -104,8 +120,8 @@ export default {
       height: 117px;
       background: #fff;
       image {
-        width: 100%;
-        height: 100%;
+        width: 150px;
+        height: 110px;
       border-radius:5px;
       }
     }

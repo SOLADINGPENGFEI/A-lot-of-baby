@@ -73,7 +73,7 @@ export default {
            this.orderStatus = index
            console.log(this.orderStatus, index)
            await this.getOrder()
-           this.updateOrderData({orderStatus:index})
+           this.updateOrderData({index})
         }
        
     },

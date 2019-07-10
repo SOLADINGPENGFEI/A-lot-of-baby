@@ -1,4 +1,4 @@
-import {newAddress,order} from '@/Api/index'
+import {newAddress,order,user} from '@/Api/index'
 const moment = require('moment')
 
 const state = {
@@ -17,7 +17,7 @@ const state = {
     },
     orderStatus: 1,
     list: [],
-    ind: 1
+    userData: {}
 }
 
 const actions = {
@@ -46,6 +46,15 @@ const actions = {
 
             resolve()
         })
+    },
+    // 获取用户数据
+    getUser({commit,state}, payload) {
+        return new Promise(async (resolve, reject) => {
+            let result = await user()
+            console.log('result...',result)
+            commit('updateUser',{userData:{...state.userData,...result.result}})
+            resolve()
+        })
     }
     
 }
@@ -58,10 +67,14 @@ const mutations = {
     // 获取订单数据
     updateOrderData(state, payload) {
         console.log('updateOrderData...',payload)
-        state.orderStatus = payload.orderStatus
+        state.orderStatus = payload.index
         state.list = payload.list.result
-        
+    },
+    // 获取用户数据
+    updateUser(state, payload) {
+        state.userData = payload.userData
     }
+    
 }
 
 function formatTime(createTime) {

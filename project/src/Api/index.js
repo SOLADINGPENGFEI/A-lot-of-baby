@@ -27,3 +27,8 @@ export let loading=params=>{
     return request.post("/api/open/page/home/products/1.0.0?pageIndex=1")
 }
 
+// 请求用户数据
+export let user = params => {
+    return request.post('/api/open/user/info/only/1.0.0')
+}
+

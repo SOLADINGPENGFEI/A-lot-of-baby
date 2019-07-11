@@ -1,4 +1,4 @@
-import {newAddress,order,user} from '@/Api/index'
+import {newAddress,order,user,realapprove} from '@/Api/index'
 const moment = require('moment')
 
 const state = {
@@ -17,7 +17,13 @@ const state = {
     },
     orderStatus: 1,
     list: [],
-    userData: {}
+    userData: {},
+    realname: {
+        id_img_positive: '',
+        id_img_opposite: '',
+        trueName: '',
+        idNumber: ''
+    }
 }
 
 const actions = {
@@ -55,8 +61,16 @@ const actions = {
             commit('updateUser',{userData:{...state.userData,...result.result}})
             resolve()
         })
+    },
+    // 实名认证表单
+    async getRealname(state, ...payload) {
+        return new Promise(async (resolve,reject) => {
+            console.log('realnamepayload...',payload[0])
+            let result = await realapprove(payload[0])
+            resolve(result)
+        })
     }
-    
+
 }
 
 const mutations = {
@@ -73,8 +87,11 @@ const mutations = {
     // 获取用户数据
     updateUser(state, payload) {
         state.userData = payload.userData
+    },
+    //实名认证
+    updateRealname(state, payload) {
+        state.realname = { ...state.realname, ...payload }
     }
-    
 }
 
 function formatTime(createTime) {

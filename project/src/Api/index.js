@@ -50,3 +50,8 @@ export let user = params => {
     return request.post('/api/open/user/info/only/1.0.0')
 }
 
+// 实名认证
+export let realapprove = params => {
+    return request.post('/api/open/user/auth/identityBase64/1.0.0',params)
+}
+

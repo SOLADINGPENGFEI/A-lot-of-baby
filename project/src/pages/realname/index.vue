@@ -3,11 +3,11 @@
         <div class="information">
             <div class="reaname">
                 <label>真实姓名</label>
-                <input type="text" placeholder="请输入身份证姓名">
+                <input type="text" placeholder="请输入身份证姓名" v-model="realname.trueName">
             </div>
             <div class="id-card">
                 <label>身份证号</label>
-                <input type="text" placeholder="请输入身份证号">
+                <input type="text" placeholder="请输入身份证号" v-model="realname.idNumber">
             </div>
         </div>
         <div class="upload">
@@ -41,6 +41,7 @@
     </form>
 </template>
 <script>
+import { mapState, mapMutations, mapActions } from 'vuex'
 export default {
     components:{
 
@@ -52,9 +53,17 @@ export default {
         }
     },
     computed:{
-
+        ...mapState({
+            realname: state => state.index.realname
+        })
     },
     methods:{
+        ...mapActions({
+            getRealname: 'index/getRealname'
+        }),
+        ...mapMutations({
+            updateRealname: 'index/updateRealname'
+        }),
         uploadFrontImage() {
             let that = this
             wx.chooseImage({
@@ -64,6 +73,7 @@ export default {
                         tempFilePath: tempFilePaths[0],
                         success (res) {
                             that.FrontImage = res.savedFilePath
+                            that.realname.id_img_positive = res.savedFilePath
                         }
                     })
                 }
@@ -78,11 +88,41 @@ export default {
                         tempFilePath: tempFilePaths[0],
                         success (res) {
                             that.BehindImage = res.savedFilePath
+                            that.realname.id_img_opposite = res.savedFilePath
                         }
                     })
                 }
             })
+        },
+        async submit(e) {
+            let data = await this.getRealname(this.realname)
+            console.log(data)
+               if(data.res_code === 1) {
+                wx.showModal({
+                    title: '温馨提示', //提示的标题
+                    content: data.message, //提示的内容
+                    showCancel: false,
+                    confirmText: '确定', //确定按钮的文字,默认为取消,最多4个字符
+                    confirmColor: '#197DBF', //确定按钮的文字颜色
+                    success: res => {
+                        console.log(res)
+                        if(res.confirm) {
+                            wx.navigateBack({
+                            delta: 1
+                            })
+                        }
+                    }
+                })
+            } else {
+                wx.showModal({
+                    title: 'data.message',
+                    icon: 'fail'
+                })
+            }
         }
+    },
+    onShow() {
+        
     },
     created(){
 

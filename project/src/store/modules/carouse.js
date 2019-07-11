@@ -1,9 +1,10 @@
-import { carouse ,dapaiDetail,storeDetail,postage} from '@/Api';
+import { carouse ,dapaiDetail,storeDetail,postage,specifications} from '@/Api';
 const state = {
     dapaiData: {},
     dapaiDetailData:{},
-    storeDetailData:{},
-    postageData:{}
+    storeDetailData:{},//商品详情
+    postageData:{},//包邮
+    specificationsData:{}//规格
 }
 
 const getters = {
@@ -32,6 +33,11 @@ const mutations = {
     upPostageData(state,payload){
         state.postageData=payload
         console.log("state.postageData",state.postageData)
+    },
+    //规格
+    upSpecificationsData(state,payload){
+        state.specificationsData=payload
+        console.log("state.specificationsData",state.specificationsData)
     }
 }
 
@@ -58,6 +64,12 @@ const actions = {
         console.log("payload。。。。。",payload)
         const data=await postage(payload)
         commit("upPostageData",data)
+    },
+    //规格
+    async getSpecificationsData({commit},payload){
+        console.log("payload。。。。。",payload)
+        const data=await specifications(payload)
+        commit("upSpecificationsData",data)
     }
 }
 

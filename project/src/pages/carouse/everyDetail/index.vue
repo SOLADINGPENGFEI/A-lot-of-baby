@@ -1,5 +1,5 @@
 <template>
-    <div v-if="dapaiDetailData" class='dapaiDetail'>
+    <div v-if="dapaiDetailData&&storeDetailData&&postageData&&specificationsData" class='dapaiDetail'>
       <scroll-view scroll-y>
         <div class="content">
         <Swiper :Images="dapaiDetailData.supplierProductPictureVoList" />
@@ -14,7 +14,7 @@
         <p class="title">
           {{dapaiDetailData.title}}
           <span>快递包邮</span>
-          </p>
+        </p>
           
           <div class="specs" @click="dailog">
             <p>
@@ -37,7 +37,7 @@
           <div></div>
           <p class="sureBtn">确定</p>
         </div>
-        <div v-if="dailogShow" class="big" @click="delDailog">
+        <div  v-if="dailogShow" class="big" @click="delDailog">
 
         </div>
     </div>
@@ -61,25 +61,30 @@ export default {
     ...mapState({
       dapaiDetailData: state => state.carouse.dapaiDetailData,
       storeDetailData: state => state.carouse.storeDetailData,
-      postageData: state => state.carouse.postageData
+      postageData: state => state.carouse.postageData,
+      specificationsData: state => state.carouse.specificationsData
     })
   },
   methods: {
     ...mapActions({
       getDapaiDetailData: "carouse/getDapaiDetailData",
       getStoreDetailData: "carouse/getStoreDetailData",
-      getPostageData: "carouse/getPostageData"
+      getPostageData: "carouse/getPostageData",
+      getSpecificationsData: "carouse/getSpecificationsData",
+      
     }),
     //弹框
     dailog() {
       this.dailogShow = true;
+      
     },
     delDailog(){
-      this.dailogShow = false;
+      this.dailogShow=false
+     
     }
   },
   mounted() {
-    console.log("postageData....", this.postageData);
+    console.log("specificationsData....111", this.specificationsData.result);
   },
   onLoad(options) {
     let pid = options.pid;
@@ -96,27 +101,35 @@ export default {
     this.getPostageData({
       sstid: this.dapaiDetailData.sstid
     });
+    //规格
+     this.getSpecificationsData({
+        pid:this.dapaiDetailData.pid
+      })
   }
 };
 </script>
 <style  lang="scss">
-.big{
+.big {
   position: absolute;
-  top:0;
+  top: 0;
   left: 0;
-z-index: 50;
-  width:100%;
-  height:100%;
+  z-index: 50;
+  width: 100%;
+  height: 100%;
   background: rgba(0, 0, 0, 0.4);
 }
 .dapaiDetail {
-   width:100%;
-  height:100%;
+  width: 100%;
+  height: 100%;
   position: relative;
   display: flex;
   flex-direction: column;
-  
   z-index: 1;
+  .storeDetail{
+    img{
+      width:100%;
+    }
+  }
   .dailog {
     width: 100%;
     height: 250px;
@@ -131,7 +144,7 @@ z-index: 50;
       width: 100%;
       flex: 1;
     }
-      .sureBtn {
+    .sureBtn {
       height: 55px;
       line-height: 55px;
       text-align: center;
@@ -139,16 +152,6 @@ z-index: 50;
       border-radius: 10px;
       background: linear-gradient(217deg, #f86367, #fb2579);
     }
-    }
-     .storeDetail{
-      width:100%;
-      img{
-        width:100%;
-      }
-      img:last-child{
-        height:800px;
-      }
-  
   }
   scroll-view,
   .content {
@@ -241,7 +244,7 @@ z-index: 50;
 .banner {
   position: relative;
   height: 360px;
-  width: 100%;
+
   swiper {
     width: 100%;
     height: 100%;

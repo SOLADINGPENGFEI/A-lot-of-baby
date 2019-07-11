@@ -14,16 +14,16 @@
               <SwiperA></SwiperA>
               <!-- 首页Banner广告图 -->
             <div class="banner">
-                <div class="banOne">
+                <div class="banOne" @click="banOne">
                    <image :src="getswipe[1].items[0].imgUrl" alt="" />
                 </div>
                 <div class="banTwo">
-                    <image class="one" :src="getswipe[1].items[1].imgUrl" />
-                    <image class="two" :src="getswipe[1].items[2].imgUrl" />
+                    <image class="one" :src="getswipe[1].items[1].imgUrl" @click="one" />
+                    <image class="two" :src="getswipe[1].items[2].imgUrl" @click="two" />
                 </div>
             </div>
 
-            <div class="bigimg">
+            <div class="bigimg" @click="bigimg">
                <image class="imgact" :src="getswipe[0].items[0].imgUrl" alt="" />
             </div>
              <!--精选好物Dl组件第一个使用  --> 
@@ -43,7 +43,7 @@
              <ban-ner :dataSwiper="getswipe[8].items"></ban-ner>
 
              <div class="bigimg">
-               <image class="imgact" :src="getswipe[0].items[3].imgUrl" alt="" />
+               <image class="imgact" :src="getswipe[0].items[3].imgUrl" alt=""  />
             </div>
               <!--精选好物Dl组件第四个使用  --> 
              <ban-ner :dataSwiper="getswipe[10].items"></ban-ner>
@@ -81,8 +81,27 @@ export default {
      
      btnSearch(){
         wx.navigateTo({ url: '/pages/search/main' });
-     }
-
+     },
+    banOne(){
+       wx.navigateTo({
+          url:'/pages/carouse/main?siid=156'
+      })
+    },
+    one(){
+       wx.navigateTo({
+          url:'/pages/carouse/main?siid=156'
+      })
+    },
+     two(){
+       wx.navigateTo({
+          url:'/pages/carouse/main?siid=171'
+      })
+    },
+    bigimg(){
+       wx.navigateTo({
+          url:'/pages/carouse/main?siid=182'
+      })
+    }
   },
 
 

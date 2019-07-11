@@ -3,13 +3,13 @@
         <div class="message">
             <div class="receiving">
                 <input type="text" placeholder="收货人" v-model="current.consignee">
-                <image src="/static/images/lt.svg"></image>
+                <image src="/static/images/lt.svg" />
             </div>
             <div class="phone-number">
                 <input type="text" placeholder="手机号码" v-model="current.consigneePhone">
                 <label>
                     <span>+ 86</span>
-                    <image src="/static/images/lt.svg"></image>
+                    <image src="/static/images/lt.svg" />
                 </label>
             </div>
             <div class="receiving">
@@ -21,7 +21,7 @@
                         <input class="pikers"  v-model="region" placeholder="所在地区"/>
                     </view>
                 </picker>
-                <image src="/static/images/lt.svg"></image>
+                <image src="/static/images/lt.svg" />
             </div>
             <div class="detail-address">
                 <textarea name="" id="" cols="30" rows="10" v-model="current.address"

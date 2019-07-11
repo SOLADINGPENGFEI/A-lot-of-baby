@@ -28,6 +28,7 @@ export default {
   //   console.log(`log at:${Date.now()}`)
   // }
 }
+
 </script>
 
 <style>
@@ -37,13 +38,9 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  box-sizing: border-box;
-}
-image {
-  display:inline-block;
-  overflow:hidden;
 
 }
+
 /* this rule will be remove */
 * {
 

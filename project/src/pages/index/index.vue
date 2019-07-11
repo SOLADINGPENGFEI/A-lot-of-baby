@@ -1,49 +1,57 @@
 <template>
-  <scroll-view scroll-y>
-    <div class="wrap" v-if="getswipe">
-        <!-- 首页搜索导航跳转搜索页面 -->
-      <div class="inPut">
-          <div class="bigInput">
-                <image src="/static/images/search.png" />
-          </div>
-      </div>      
-        <!-- 导航组件 -->
-        <Nava></Nava>  
-        <!-- 轮播图组件 -->
-        <SwiperA></SwiperA>
-        <!-- 首页Banner广告图 -->
-      <div class="banner" >
-          <div class="banOne">
-              <image :src="getswipe[1].items[0].imgUrl" alt="" />
-          </div>
-          <div class="banTwo">
-              <image class="one" :src="getswipe[1].items[1].imgUrl" />
-              <image class="two" :src="getswipe[1].items[2].imgUrl" />
-          </div>
-      </div>
-      <div class="bigimg">
-          <image class="imgact" :src="getswipe[0].items[0].imgUrl" alt="" />
-      </div>
-        <!--精选好物Dl组件第一个使用  --> 
-      <ban-ner :dataSwiper="getswipe[4].items"></ban-ner>
-      <div class="bigimg">
-          <image class="imgact" :src="getswipe[0].items[1].imgUrl" alt="" />
-      </div>
-        <!--精选好物Dl组件第二个使用  --> 
-      <ban-ner :dataSwiper="getswipe[6].items"></ban-ner>
-      <div class="bigimg">
-          <image class="imgact" :src="getswipe[0].items[2].imgUrl" alt="" />
-      </div>
-      <!--精选好物Dl组件第三个使用  --> 
-      <ban-ner :dataSwiper="getswipe[8].items"></ban-ner>
-      <div class="bigimg">
-          <image class="imgact" :src="getswipe[0].items[3].imgUrl" alt="" />
-      </div>
-        <!--精选好物Dl组件第四个使用  --> 
-      <ban-ner :dataSwiper="getswipe[10].items"></ban-ner>
-      <!-- 底部加载loading组件 -->
-      <loa-ding></loa-ding> 
-    </div>
+
+ <scroll-view>
+  <div class="wrap">
+              <!-- 首页搜索导航跳转搜索页面 -->
+            <div class="inPut">
+                <div class="bigInput">
+                     <image @click="btnSearch" src="/static/images/search.png" />
+                </div>
+            </div>      
+              <!-- 导航组件 -->
+              <Nava></Nava>  
+              <!-- 轮播图组件 -->
+              <SwiperA></SwiperA>
+              <!-- 首页Banner广告图 -->
+            <div class="banner">
+                <div class="banOne">
+                   <image :src="getswipe[1].items[0].imgUrl" alt="" />
+                </div>
+                <div class="banTwo">
+                    <image class="one" :src="getswipe[1].items[1].imgUrl" />
+                    <image class="two" :src="getswipe[1].items[2].imgUrl" />
+                </div>
+            </div>
+
+            <div class="bigimg">
+               <image class="imgact" :src="getswipe[0].items[0].imgUrl" alt="" />
+            </div>
+             <!--精选好物Dl组件第一个使用  --> 
+            <ban-ner :dataSwiper="getswipe[4].items"></ban-ner>
+
+            <div class="bigimg">
+               <image class="imgact" :src="getswipe[0].items[1].imgUrl" alt="" />
+            </div>
+
+              <!--精选好物Dl组件第二个使用  --> 
+            <ban-ner :dataSwiper="getswipe[6].items"></ban-ner>
+
+            <div class="bigimg">
+               <image class="imgact" :src="getswipe[0].items[2].imgUrl" alt="" />
+            </div>
+            <!--精选好物Dl组件第三个使用  --> 
+             <ban-ner :dataSwiper="getswipe[8].items"></ban-ner>
+
+             <div class="bigimg">
+               <image class="imgact" :src="getswipe[0].items[3].imgUrl" alt="" />
+            </div>
+              <!--精选好物Dl组件第四个使用  --> 
+             <ban-ner :dataSwiper="getswipe[10].items"></ban-ner>
+
+            <!-- 底部加载loading组件 -->
+            <loa-ding></loa-ding> 
+           
+  </div>
   </scroll-view>
 </template>
 <script>
@@ -74,7 +82,14 @@ export default {
      ...mapActions({
       DataNav: "nav/DataNav"
     }),
+     
+     btnSearch(){
+        wx.navigateTo({ url: '/pages/search/main' });
+     }
+
   },
+
+
   computed: {
     ...mapState({
       // 把vuex数据赋给变量名
@@ -84,6 +99,7 @@ export default {
   onShow() {
     this.getswiper();
     this.DataNav()
+    this.getswiper(1);
   }
 };
 </script>
@@ -99,9 +115,7 @@ export default {
 .inPut {
   width: 100%;
   height: 44px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
   .bigInput {
     width: 98%;
     height: 35px;
@@ -120,8 +134,11 @@ export default {
       flex: 1;
       padding: 0 6px;
       box-sizing: border-box;
+      width:100%;
+      height: 100%;
       color: #a9adb1;
     }
+    
   }
 }
 .nav {
@@ -176,3 +193,4 @@ export default {
   }
 }
 </style>
+

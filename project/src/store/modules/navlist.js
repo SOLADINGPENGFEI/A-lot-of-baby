@@ -42,9 +42,8 @@ const mutations={
 }
 const getters={
     getNavChilds(state){
-        console.log(state.getNavChildsId)
+        // console.log(state.getNavChildsId)
          if(state.navI!=-1){
-            console.log("123213")
             return state.navlist.filter(item=>item.cid===state.getNavChildsId)
          }
     }

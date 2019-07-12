@@ -11,7 +11,8 @@
     "pages/myaddress/main",
     "pages/CustomerService/main",
     "pages/realname/main",
-    "pages/newaddress/main"
+    "pages/newaddress/main",
+    "pages/share/main"
    
   ],
   "window": {

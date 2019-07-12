@@ -30,7 +30,7 @@
           </div>
        </scroll-view> 
         <div class="footer">
-          <p class="btn">分享赚{{dapaiDetailData.earnMoney}}</p>
+          <p class="btn" @click="canvasDraw(pid)">分享赚{{dapaiDetailData.earnMoney}}</p>
           <p class="btn">立即购买</p>
         </div>
         <div v-if="dailogShow" class="dailog">
@@ -54,7 +54,8 @@ export default {
   },
   data() {
     return {
-      dailogShow: false
+      dailogShow: false,
+      pid: null
     };
   },
   computed: {
@@ -81,13 +82,20 @@ export default {
     delDailog(){
       this.dailogShow=false
      
+    },
+    canvasDraw() {
+      wx.navigateTo({
+        url: '/pages/share/main?pid='+ this.pid
+      })
     }
   },
   mounted() {
-    console.log("specificationsData....111", this.specificationsData.result);
+    // console.log("specificationsData....111", this.specificationsData.result);
   },
   onLoad(options) {
     let pid = options.pid;
+    this.pid = pid
+    // console.log('data-pid...',this.pid)
     //请求产品详情
     this.getDapaiDetailData({
       pid
@@ -105,6 +113,7 @@ export default {
      this.getSpecificationsData({
         pid:this.dapaiDetailData.pid
       })
+    
   }
 };
 </script>

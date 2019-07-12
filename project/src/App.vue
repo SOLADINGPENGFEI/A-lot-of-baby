@@ -9,15 +9,36 @@ export default {
      * 百度：mpvue === swan, mpvuePlatform === 'swan'
      * 支付宝(蚂蚁)：mpvue === my, mpvuePlatform === 'my'
      */
+
+    // let logs
+    // if (mpvuePlatform === 'my') {
+    //   logs = mpvue.getStorageSync({key: 'logs'}).data || []
+    //   logs.unshift(Date.now())
+    //   mpvue.setStorageSync({
+    //     key: 'logs',
+    //     data: logs
+    //   })
+    // } else {
+    //   logs = mpvue.getStorageSync('logs') || []
+    //   logs.unshift(Date.now())
+    //   mpvue.setStorageSync('logs', logs)
+    // }
   },
+  // log () {
+  //   console.log(`log at:${Date.now()}`)
+  // }
 }
 
 </script>
 
 <style>
-page{
-       width:100%;
-       height:100%;
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
 }
 
 /* this rule will be remove */
@@ -27,5 +48,10 @@ page{
   -moz-transition: width 2s;
   -webkit-transition: width 2s;
   -o-transition: width 2s;
+  box-sizing: border-box;
+}
+page{
+  width: 100%;
+  height: 100%;
 }
 </style>

@@ -1,35 +1,32 @@
 <template>
-        <div>
-            <div class="guangGao">
-               <div>
-                  <span>为你精选 |</span>
-                  <span>等你来抢</span>
-               </div>
-               <div>更多 》</div>
-            </div>
-    <div class="loading" v-if="getLoading">
-          <dl v-for="(item,index) in getLoading" :key="index">
-              <dt>
-                  <image :src="item.productVo.mainImgUrl" alt="" />
-              </dt>
-              <dd>
-                  <p>{{item.productVo.title}}</p>
-                  <div class="act">
-                      <span>包邮</span>
-                      <span>包税</span>
-                  </div>
-                  <div class="att">
-                    <h2>￥{{item.productVo.salesPrice}}</h2>
-                    <span class="atta">￥{{item.productVo.supplyPrice}}</span>
-                    <span class="attb">赚￥{{item.productVo.vipPrice}}</span>
-                  </div>
-              </dd>
-          </dl>
-
-   
-    </div> 
-
+  <div>
+    <div class="guangGao">
+      <div>
+        <span>为你精选 |</span>
+        <span>等你来抢</span>
+      </div>
+      <div>更多 》</div>
     </div>
+    <div class="loading" v-if="getLoading">
+      <dl v-for="(item,index) in getLoading" :key="index">
+        <dt>
+          <image :src="item.productVo.mainImgUrl" alt />
+        </dt>
+        <dd>
+          <p>{{item.productVo.title}}</p>
+          <div class="act">
+            <span>包邮</span>
+            <span>包税</span>
+          </div>
+          <div class="att">
+            <h2>￥{{item.productVo.salesPrice}}</h2>
+            <span class="atta">￥{{item.productVo.supplyPrice}}</span>
+            <span class="attb">赚￥{{item.productVo.vipPrice}}</span>
+          </div>
+        </dd>
+      </dl>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -38,7 +35,7 @@ import { mapActions, mapState } from "vuex";
 export default {
   data() {
     return {
-      pageIndex:1
+      pageIndex: 1
     };
   },
 
@@ -47,7 +44,7 @@ export default {
       loadings: "loading/getloading"
     })
   },
-    computed: {
+  computed: {
     ...mapState({
       // 把vuex数据赋给变量名
       getLoading: state => state.loading.getLoading
@@ -58,19 +55,19 @@ export default {
     this.loadings(this.pageIndex);
   },
 
-    onReachBottom () {//上拉加载
-        this.pageIndex = this.pageIndex+1;
-        if(this.pageIndex > 4){
-           console.log('我是底线的')
-        }else{
-          this.loadings(this.pageIndex);
-        }
-    },
+  onReachBottom() {
+    //上拉加载
+    this.pageIndex = this.pageIndex + 1;
+    if (this.pageIndex > 4) {
+      console.log("我是底线的");
+    } else {
+      this.loadings(this.pageIndex);
+    }
+  },
 
-     onPullDownRefresh () {
-        console.log('下拉刷新')
-   
-    },
+  onPullDownRefresh() {
+    console.log("下拉刷新");
+  }
 };
 </script>
 
@@ -113,8 +110,8 @@ export default {
     background: #fff;
     display: flex;
     align-items: center;
-    margin:5px 0;
-    
+    margin: 5px 0;
+
     dt {
       width: 155px;
       height: 117px;

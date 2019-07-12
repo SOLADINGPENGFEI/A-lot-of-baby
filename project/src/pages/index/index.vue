@@ -54,7 +54,6 @@
   </div>
   </scroll-view>
 </template>
-
 <script>
 import { mapActions, mapState } from "vuex";
 
@@ -64,6 +63,8 @@ import banNer from "@/components/banner/banner"; // 精选好物Dl组件
 import loaDing from "@/components/loading/loading"; // 底部加载loading组件
 
 export default {
+  props: {},
+
   data() {
     return {};
   },
@@ -77,6 +78,9 @@ export default {
   methods: {
     ...mapActions({
       getswiper: "Swiper/swipers"
+    }),
+     ...mapActions({
+      DataNav: "nav/DataNav"
     }),
      
      btnSearch(){
@@ -93,12 +97,12 @@ export default {
     })
   },
   onShow() {
+    this.getswiper();
+    this.DataNav()
     this.getswiper(1);
   }
 };
 </script>
-
-
 <style scoped lang="scss">
 .wrap {
   width: 100%;
@@ -122,6 +126,14 @@ export default {
     box-sizing: border-box;
     border-radius: 5px;
     image {
+      width: 100%;
+      height: 100%;
+      color: #a9adb1;
+    }
+    div {
+      flex: 1;
+      padding: 0 6px;
+      box-sizing: border-box;
       width:100%;
       height: 100%;
       color: #a9adb1;
@@ -156,14 +168,14 @@ export default {
     justify-content: space-between;
     .one {
       width: 100%;
-      height: 48%;
+      height: 49%;
       background: salmon;
       margin-bottom: 3px;
       border-radius: 5px;
     }
     .two {
       width: 100%;
-      height: 50%;
+      height: 49%;
       background: sandybrown;
       border-radius: 5px;
     }

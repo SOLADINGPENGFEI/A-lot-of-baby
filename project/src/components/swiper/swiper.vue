@@ -56,7 +56,7 @@ export default {
   width: 100%;
   height: 150px;
   background: #fff;
-  margin-top: 5px;
+  margin-top: 10px;
   image {
     width: 100%;
     height: 100%;

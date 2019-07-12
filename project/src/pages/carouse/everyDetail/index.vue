@@ -15,7 +15,6 @@
           {{dapaiDetailData.title}}
           <span>快递包邮</span>
         </p>
-          
           <div class="specs" @click="dailog">
             <p>
               <span>选择</span>
@@ -81,7 +80,10 @@ export default {
     delDailog(){
       this.dailogShow=false
      
-    }
+    },
+    // ShareFn(){//pages/share/main
+    //     wx.navigateTo({ url: '/pages/shareCanvas/main' });
+    // }
   },
   mounted() {
     console.log("specificationsData....111", this.specificationsData.result);

@@ -10,7 +10,7 @@ export let carouse = (parmars) => {
 }
 //跳大牌化妆品商品详情
 export let dapaiDetail = parmars => {
-    return request.post('https://upapi.jinaup.com/api/open/product/info/1.0.0?', parmars)
+    return request.post('https://upapi.jinaup.com/api/open/product/info/1.0.0', parmars)
 }
 //跳详情里的产品详情
 export let storeDetail = parmars => {

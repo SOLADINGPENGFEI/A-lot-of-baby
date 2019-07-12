@@ -17,27 +17,27 @@ const mutations = {
     //大牌化妆品
     upDapaiData(state, payload) {
         state.dapaiData = payload.result
-        console.log("state.dapaiData", state.dapaiData)
+        // console.log("state.dapaiData", state.dapaiData)
     },
      //大牌商品详情
      upDapaiDetailData(state, payload) {
         state.dapaiDetailData = payload.result
-        console.log("state.dapaiDetailData", state.dapaiDetailData)
+        // console.log("state.dapaiDetailData", state.dapaiDetailData)
     },
     //产品详情
     upStoreDetailData(state,payload){
         state.storeDetailData=payload
-        console.log("state.storeDetailData",state.storeDetailData)
+        // console.log("state.storeDetailData",state.storeDetailData)
     },
     //详情是否包邮
     upPostageData(state,payload){
         state.postageData=payload
-        console.log("state.postageData",state.postageData)
+        // console.log("state.postageData",state.postageData)
     },
     //规格
     upSpecificationsData(state,payload){
         state.specificationsData=payload
-        console.log("state.specificationsData",state.specificationsData)
+        // console.log("state.specificationsData",state.specificationsData)
     }
 }
 
@@ -55,19 +55,19 @@ const actions = {
     },
     //产品详情
     async getStoreDetailData({commit},payload){
-        console.log("payload。。。。。",payload)
+        // console.log("payload。。。。。",payload)
         const data=await storeDetail(payload)
         commit("upStoreDetailData",data)
     },
     //详情是否包邮
     async getPostageData({commit},payload){
-        console.log("payload。。。。。",payload)
+        // console.log("payload。。。。。",payload)
         const data=await postage(payload)
         commit("upPostageData",data)
     },
     //规格
     async getSpecificationsData({commit},payload){
-        console.log("payload。。。。。",payload)
+        // console.log("payload。。。。。",payload)
         const data=await specifications(payload)
         commit("upSpecificationsData",data)
     }

@@ -115,7 +115,7 @@ export default {
                 })
             } else {
                 wx.showModal({
-                    title: 'data.message',
+                    title: data.message,
                     icon: 'fail'
                 })
             }

@@ -9,7 +9,7 @@
                 <image src="/static/images/wudingdan.png"/>
                 <p>暂时没有订单┗|｀O′|┛ 嗷~~</p>
             </div>
-            <div class="list">
+            <div class="list" v-else>
                <div class="list-item" 
                 v-for="(item, index) in list" :key="index">
                     <div class="time">

@@ -4,7 +4,7 @@ export let newAddress = params => {
     return request.post('/api/open/user/address/addAddress/1.0.0', params)
 }
 
-//轮播跳详情
+//轮播、图片跳详情
 export let carouse = (parmars) => {
     return request.post('https://upapi.jinaup.com/api/open/sepcial/query/1.0.0', parmars)
 }
@@ -20,6 +20,11 @@ export let storeDetail = parmars => {
 export let postage = parmars => {
     return request.post('https://upapi.jinaup.com/api/open/shipping/templates/info/1.0.0', parmars)
 }
+//规格
+export let specifications=parmars=>{
+    return request.post('https://upapi.jinaup.com/api/open/product/sku/attrs/1.0.0',parmars) 
+}
+
 //订单数据
 export let order = params => {
     return request.post('/api/open/order/query/1.0.0', params)
@@ -49,5 +54,10 @@ export let loading = params => {
 // 请求用户数据
 export let user = params => {
     return request.post('/api/open/user/info/only/1.0.0')
+}
+
+// 实名认证
+export let realapprove = params => {
+    return request.post('/api/open/user/auth/identityBase64/1.0.0',params)
 }
 

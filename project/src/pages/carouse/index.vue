@@ -110,9 +110,11 @@ export default {
     color: red;
   }
   .img_big {
+    width:100%;
     height: 400px;
   }
   .img_small {
+    width:100%;
     height: 225px;
   }
 

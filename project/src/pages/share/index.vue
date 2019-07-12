@@ -31,6 +31,7 @@
 </template>
 <script>
 import {mapState, mapMutations, mapActions} from 'vuex'
+const qrCode = 'https://upapi.jinaup.com/static/image/QRCode.png';
 export default {
     props:{
 
@@ -59,13 +60,74 @@ export default {
         var context = wx.createCanvasContext('firstCanvas')
         context.rect(0, 0, 218, 386)
         //绘制用户名和头像
-        context.drawImage(this.dapaiDetailData.mainImgUrl,0, 0, 40, 40, 20, 12, 40, 40)
+        context.drawImage(this.dapaiDetailData.mainImgUrl,0, 0, 800, 800, 12, 12, 40, 40)
         context.save()
         context.setFontSize(12)
         context.fillText(`${'***'}分享给你一个商品`,60, 26)
         context.fillText(`邀请码: ********`,60, 46)
         context.restore()
+        //绘制商品大图和标题
+        // context.save()
+        // context.setFontSize(12)
 
+        // 拿到图片的宽高
+        wx.getImageInfo({
+            src: this.dapaiDetailData.mainImgUrl,
+            complete: res => {
+                console.log('res...',res)
+                let rx,ry,rw,rh
+                if(res.width/res.height>220/260) {
+                    ry = 0
+                    rh = res.height
+                    rw = res.height/260*220
+                    rh = (res.width - rw) / 2
+                } else {
+                    rx = 0
+                    rw = res.width
+                    rh = res.height/220*260
+                    ry = (res.height - rh) / 2
+                }
+                context.drawImage(this.dapaiDetailData.mainImgUrl,0,0,res.width,res.height,0,80,160,200)
+                context.draw(true, () => {
+                    // 生成图片
+                    wx.canvasToTempFilePath({
+                        canvasId: 'firstCanvas',
+                        quality: 1,
+                        width: 218,
+                        height: 386,
+                        y: 100,
+                        fileType: 'jpg',
+                        complete: res => {
+                            console.log('tmpFile-res...',res)
+                            // 预览
+                            // wx.previewImage({
+                            //     urls: [res.tempFilePath]
+                            // })
+                        }
+                    })
+                })
+            }
+        })
+
+        //绘制二维码
+        context.save()
+        context.setFontSize(15)
+        context.fillText('长按识别二维码',20,340)
+        context.drawImage(qrCode, 0,0,1000,1000,140, 310, 60, 60)
+
+        // 绘制商品价格
+        context.save()
+        context.setFontSize(10)
+        context.setFillStyle('#ff0000')
+        context.fillText('￥',20,300)
+
+        context.setFontSize(18)
+        context.fillText(this.dapaiDetailData.salesPrice,30,300)
+        context.setFontSize(10)
+        context.setFillStyle('#999')
+
+        context.fillText(`￥${this.dapaiDetailData.marketPrice}`,120-context.measureText(`￥${this.dapaiDetailData.marketPrice}`).width, 300)
+        context.restore()
 
         context.draw();
     },
@@ -101,6 +163,9 @@ export default {
             .left-pic {
                 width:100%;
                 height:760rpx;
+                ._canvas {
+                    border: 1px solid #000;
+                }
             }
             .right-pic {
                 width:560rpx;

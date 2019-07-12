@@ -1,18 +1,21 @@
 <template>
   <div class="wrap">
     <Nava></Nava>
-    <ClassifyNav :options="getNavChilds[0].childs"></ClassifyNav>
+    <ClassifyNav :data="getNavChilds[0].childs"></ClassifyNav>
+    <classifySort></classifySort>
   </div>
 </template>
 <script>
 import { mapState, mapActions, mapMutations, mapGetters } from "vuex";
 import Nava from "@/components/nav/nav"; //头部导航组件
 import ClassifyNav from "../../components/classifyNav"; //头部导航子列表
+import classifySort from "../../components/classifySort"; //头部导航子列表排序
+
 
 export default {
   props: {},
   components: {
-    Nava,ClassifyNav
+    Nava,ClassifyNav,classifySort
   },
   data() {
     return {};

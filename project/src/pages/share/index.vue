@@ -74,7 +74,7 @@ export default {
         wx.getImageInfo({
             src: this.dapaiDetailData.mainImgUrl,
             complete: res => {
-                console.log('res...',res)
+                // console.log('res...',res)
                 let rx,ry,rw,rh
                 if(res.width/res.height>220/260) {
                     ry = 0
@@ -93,8 +93,6 @@ export default {
                     wx.canvasToTempFilePath({
                         canvasId: 'firstCanvas',
                         quality: 1,
-                        width: 218,
-                        height: 386,
                         y: 100,
                         fileType: 'jpg',
                         complete: res => {

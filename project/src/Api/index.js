@@ -32,7 +32,10 @@ export let navTab = params => {
 export let navData = params => {
     return request.post("/api/open/product/category/sub/1", { parentId: 0 })
 }
-
+//nav列表接口 api/open/product/category/productList/1.0.0
+export let navSort=params=>{
+    return request.post("api/open/product/category/productList/1.0.0",{params})
+}
 // 首页 swiper dl 基本渲染接口
 export let getSwiper = params => {
     return request.post("/api/open/page/home/list/1.0.0")
@@ -40,7 +43,7 @@ export let getSwiper = params => {
 
 // 首页 dl加载loading 接口
 export let loading = params => {
-    return request.post("/api/open/page/home/products/1.0.0?pageIndex=" + params)
+    return request.post("/api/open/page/home/products/1.0.0?",{pageIndex:params} )
 }
 
 // 请求用户数据

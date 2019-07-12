@@ -1,8 +1,9 @@
 <template>
   <div class="wrap">
-    <Nava></Nava>
+    <Nava ></Nava>
     <ClassifyNav :data="getNavChilds[0].childs"></ClassifyNav>
     <classifySort></classifySort>
+   
   </div>
 </template>
 <script>
@@ -30,11 +31,13 @@ export default {
   },
   methods: {
     ...mapActions({
-      navtab: "nav/navtab"
+      navtab: "nav/navtab",
+      navListSort:"nav/navListSort"
     })
   },
   onShow() {
     this.navtab();
+    this.navListSort({})
   },
   mounted() {//childs
     // console.log("1213135", this.getNavChilds[0].childs);
@@ -45,6 +48,9 @@ export default {
 .wrap {
   width: 100%;
   height: 100%;
-  
+  background:#f3f3f3;
+  .nav{
+    background: #fff;
+  }
 }
 </style>

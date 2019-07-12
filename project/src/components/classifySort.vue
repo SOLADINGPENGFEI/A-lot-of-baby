@@ -1,17 +1,18 @@
 <template>
   <div class="classify-list">
     <div class="listSort">
-        <div class="list_top">综合</div>
-        <div class="list_top">最新</div>
-        <div class="list_top">
-          价格<p>
-             <span>△</span>
-            <span>▽</span>
-          </p>
-        </div>
+      <div class="list_top">综合</div>
+      <div class="list_top">最新</div>
+      <div class="list_top">
+        价格
+        <p>
+          <span class="ascending">△</span>
+          <span class="descending">▽</span>
+        </p>
+      </div>
     </div>
     <section>
-      <img  />
+      <img />
       <h3 class="describe">把必须好几个传</h3>
       <div class="shui">包税</div>
       <div class="price">
@@ -46,20 +47,37 @@ export default {
   flex-wrap: wrap;
   justify-content: space-around;
   font-size: 14px;
-  .listSort{
-      width: 100%;
-      height: 60px;
-      background: pink;
+  .listSort {
+    width: 100%;
+    height: 44px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    .list_top {
+      font-size: 16px;
       display: flex;
-      align-items: center;
-      justify-content: space-around;
-      .list_top{
-        font-size: 16px;
+      p {
         display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        position: relative;
+        span{
+          position: absolute;
+          font-size: 30rpx;
+          &.ascending{
+            top: -2px;
+            left: 2px;
+          }
+          &.descending{
+            top: 6px;
+            left: 2px;
+          }
+        }
       }
-
     }
+  }
   section {
     width: 47%;
     height: 250px;

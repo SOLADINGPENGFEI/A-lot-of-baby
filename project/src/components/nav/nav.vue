@@ -29,7 +29,7 @@ export default {
     goClassify(item) {
       if (item === -1) {
         this.setNavI(item);
-        console.log('////////',this.flag)
+        // console.log('////////',this.flag)
         if (this.flag) {
           wx.reLaunch({
             url: "/pages/index/main"
@@ -73,6 +73,8 @@ export default {
   width: 100%;
   height: 35px;
   padding-left: 1%;
+  background: #fff;
+ 
 }
 .scroll-view_H {
   white-space: nowrap;

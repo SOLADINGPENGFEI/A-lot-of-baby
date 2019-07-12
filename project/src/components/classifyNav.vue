@@ -21,7 +21,7 @@ export default {
     text-align:center;
     flex-wrap:wrap;
     background:#fff;
-    margin-top: 10px;
+    padding: 12px;
     section{
         width:20%; 
         font-size:12px;

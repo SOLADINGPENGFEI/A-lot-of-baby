@@ -1,4 +1,4 @@
-import {navTab,navData} from '../../Api/index'
+import {navTab,navData,navSort} from '../../Api/index'
 // console.log('aaa',navTab)
 const state = {
     navlist:[],//导航数据
@@ -16,9 +16,14 @@ const actions = {
       //没有子类的导航
      async DataNav({commit}){
         const data = await navData()
-        
         commit('getnavtab',data.result)
-        
+     },
+     //获取导航列表信息
+     async navListSort({commit,state},params){
+        // const data=await navSort();
+         params.cid=state.getNavChildsId,
+         params.pageIndex=1
+        console.log("params...",params)
      }
 }
 const mutations={
@@ -32,7 +37,6 @@ const mutations={
         state.flag=payload
     },
     getNavChildsId(state,payload){
-       
         state.getNavChildsId=payload
     },
     // getNavChilds(state){
@@ -42,9 +46,9 @@ const mutations={
 }
 const getters={
     getNavChilds(state){
-        console.log(state.getNavChildsId)
+        // console.log(state.getNavChildsId)
          if(state.navI!=-1){
-            console.log("123213")
+            
             return state.navlist.filter(item=>item.cid===state.getNavChildsId)
          }
     }

@@ -25,6 +25,10 @@ export let postage=parmars=>{
 export let specifications=parmars=>{
     return request.post('https://upapi.jinaup.com/api/open/product/sku/attrs/1.0.0',parmars) 
 }
+//订单信息
+export let orderMess=parmars=>{
+    return request.post('https://upapi.jinaup.com/api/open/product/sku/query/1')
+}
 
 //订单数据
 export let order = params => {

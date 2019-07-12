@@ -1,10 +1,11 @@
-import { carouse ,dapaiDetail,storeDetail,postage,specifications} from '@/Api';
+import { carouse ,dapaiDetail,storeDetail,postage,specifications,orderMess} from '@/Api';
 const state = {
     dapaiData: {},
     dapaiDetailData:{},
     storeDetailData:{},//商品详情
     postageData:{},//包邮
-    specificationsData:{}//规格
+    specificationsData:{},//规格
+    orderMessData:{}//订单信息
 }
 
 const getters = {
@@ -37,7 +38,12 @@ const mutations = {
     //规格
     upSpecificationsData(state,payload){
         state.specificationsData=payload
-        console.log("state.specificationsData",state.specificationsData)
+        console.log("规格或默认",state.specificationsData)
+    },
+    //订单信息
+    upOrderMessData(state,payload){
+        state.orderMessData=payload
+        console.log('订单信息',state.orderMessData)
     }
 }
 
@@ -55,21 +61,23 @@ const actions = {
     },
     //产品详情
     async getStoreDetailData({commit},payload){
-        console.log("payload。。。。。",payload)
         const data=await storeDetail(payload)
         commit("upStoreDetailData",data)
     },
     //详情是否包邮
     async getPostageData({commit},payload){
-        console.log("payload。。。。。",payload)
         const data=await postage(payload)
         commit("upPostageData",data)
     },
     //规格
     async getSpecificationsData({commit},payload){
-        console.log("payload。。。。。",payload)
         const data=await specifications(payload)
         commit("upSpecificationsData",data)
+    },
+    //订单信息
+    async getOrderMessData({commit},payload){
+        const data=await orderMess(payload)
+        commit('upOrderMessData',data)
     }
 }
 

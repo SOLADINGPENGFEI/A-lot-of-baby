@@ -1,5 +1,5 @@
 <template>
-    <div v-if="dapaiDetailData&&storeDetailData&&postageData&&specificationsData" class='dapaiDetail'>
+    <div class='dapaiDetail'>
       <scroll-view scroll-y>
         <div class="content">
         <Swiper :Images="dapaiDetailData.supplierProductPictureVoList" />
@@ -17,15 +17,15 @@
         </p>
           
           <div class="specs" @click="dailog">
-            <p>
+            <p v-for="(item,index) in specificationsData.result" :key="index">
               <span>选择</span>
-              <span>规格</span>
+              <span>{{item.aname}}</span>
             </p>
               <img src="/static/images/jt.png" alt="">
           </div>
           <div v-if="postageData.result" class="postage"><span>提示</span>{{postageData.result}}</div>
           <div class="storeDetail">
-            <img v-for="(item,index) in storeDetailData&&storeDetailData.result" :key="index" :src="item.imgUrl" alt="">
+            <img v-for="(item,index) in storeDetailData.result" :key="index" :src="item.imgUrl" alt="">
           </div>
           </div>
        </scroll-view> 
@@ -34,10 +34,19 @@
           <p class="btn">立即购买</p>
         </div>
         <div v-if="dailogShow" class="dailog">
-          <div></div>
+          <div>
+            <p v-for="(item,index) in specificationsData.result" :key="index">
+              <span>{{item.aname}}</span>
+              <span @click="delDailog">X</span>
+            </p>
+            <dl>
+              <dt><img src="" alt=""></dt>
+              <dd></dd>
+            </dl>
+          </div>
           <p class="sureBtn">确定</p>
         </div>
-        <div  v-if="dailogShow" class="big" @click="delDailog">
+        <div  v-if="dailogShow" class="big">
 
         </div>
     </div>
@@ -62,7 +71,8 @@ export default {
       dapaiDetailData: state => state.carouse.dapaiDetailData,
       storeDetailData: state => state.carouse.storeDetailData,
       postageData: state => state.carouse.postageData,
-      specificationsData: state => state.carouse.specificationsData
+      specificationsData: state => state.carouse.specificationsData,
+      orderMessData: state => state.carouse.orderMessData
     })
   },
   methods: {
@@ -71,41 +81,46 @@ export default {
       getStoreDetailData: "carouse/getStoreDetailData",
       getPostageData: "carouse/getPostageData",
       getSpecificationsData: "carouse/getSpecificationsData",
-      
+      getOrderMessData: "carouse/getOrderMessData"
     }),
     //弹框
     dailog() {
       this.dailogShow = true;
-      
     },
-    delDailog(){
-      this.dailogShow=false
-     
+    delDailog() {
+      this.dailogShow = false;
     }
   },
   mounted() {
-    console.log("specificationsData....111", this.specificationsData.result);
+   
   },
-  onLoad(options) {
+  async onLoad(options) {
     let pid = options.pid;
     //请求产品详情
-    this.getDapaiDetailData({
+    await this.getDapaiDetailData({
       pid
     });
 
-    this.getStoreDetailData({
+    await this.getStoreDetailData({
       pid: this.dapaiDetailData.pid,
       basePid: this.dapaiDetailData.basePid,
       userIdentity: this.dapaiDetailData.userIdentity
     });
-    this.getPostageData({
+     //规格
+    await this.getSpecificationsData({
+      pid: this.dapaiDetailData.pid
+    });
+  console.log("specificationsData....111", [this.specificationsData.result[0].attributeValueRelationVoList[0].vid]);
+    await this.getPostageData({
       sstid: this.dapaiDetailData.sstid
     });
-    //规格
-     this.getSpecificationsData({
-        pid:this.dapaiDetailData.pid
-      })
-  }
+ let vid=[this.specificationsData.result[0].attributeValueRelationVoList[0].vid];
+    // await this.getOrderMessData({
+    //   pid: this.dapaiDetailData.pid,
+    //    vids:vid
+    // })
+    //console.log("订单。。。", this.orderMessData);
+    }
 };
 </script>
 <style  lang="scss">
@@ -125,9 +140,49 @@ export default {
   display: flex;
   flex-direction: column;
   z-index: 1;
-  .storeDetail{
-    img{
-      width:100%;
+  .storeDetail {
+    width: 100%;
+    img:nth-child(1){
+      height:204px;
+    }
+    img:nth-child(2){
+      height:447px;
+    }
+    img:nth-child(3){
+      height:437px;
+    }
+    img:nth-child(4){
+      height:457px;
+    }
+    img:nth-child(5){
+      height:407px;
+    }
+    img:nth-child(6){
+      height:415px;
+    }
+    img:nth-child(7){
+      height:452px;
+    }
+    img:nth-child(8){
+      height:409px;
+    }
+    img:nth-child(9){
+      height:410px;
+    }
+    img:nth-child(10){
+      height:352px;
+    }
+    img:nth-child(11){
+      height:529px;
+    }
+    img:nth-child(12){
+      height:434px;
+    }
+    img:nth-child(13){
+      height:172px;
+    }
+    img:nth-child(14){
+      height:990px;
     }
   }
   .dailog {
@@ -143,6 +198,17 @@ export default {
     div {
       width: 100%;
       flex: 1;
+      padding: 10px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      p:nth-child(1){
+        font-size: 14px;
+         width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+      }
     }
     .sureBtn {
       height: 55px;

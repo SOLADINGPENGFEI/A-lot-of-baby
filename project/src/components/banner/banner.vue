@@ -9,7 +9,7 @@
                <div>更多 》</div>
             </div>
      <div class="navbanner" v-if="dataSwiper">
-                 <dl v-for="(item,index) in dataSwiper" :key="index">
+                 <dl v-for="(item,index) in dataSwiper" :key="index" @click="toDetail">
                      <dt>
                         <image :src="item.imgUrl" />
                      </dt>
@@ -29,7 +29,16 @@ export default {
     return {};
   },
 
-  props:['dataSwiper']
+  props:['dataSwiper'],
+  methods:{
+    toDetail(){
+      console.log(111)
+    }
+  },
+  mounted(){
+    console.log('0000',this.dataSwiper)
+  }
+
 
   }
 

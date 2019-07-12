@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/canvas/main",
     "pages/index/main",
     "pages/search/main",
     "pages/carouse/main",

@@ -8,7 +8,7 @@
                <div>更多 》</div>
             </div>
     <div class="loading" v-if="getLoading">
-          <dl v-for="(item,index) in getLoading" :key="index">
+          <dl v-for="(item,index) in getLoading" :key="index" @click="toDetail(item.productVo.pid)">
               <dt>
                   <image :src="item.productVo.mainImgUrl" alt="" />
               </dt>
@@ -45,19 +45,25 @@ export default {
   methods: {
     ...mapActions({
       loadings: "loading/getloading"
-    })
+    }),
+    toDetail(pid){
+      console.log(22,pid)
+       wx.navigateTo({
+        url: "/pages/carouse/everyDetail/main?pid=" + pid
+      });
+    }
   },
     computed: {
     ...mapState({
       // 把vuex数据赋给变量名
       getLoading: state => state.loading.getLoading
-    })
+    }),
+    
   },
 
   created() {
     this.loadings(this.pageIndex);
   },
-
     onReachBottom () {//上拉加载
         this.pageIndex = this.pageIndex+1;
         if(this.pageIndex > 4){

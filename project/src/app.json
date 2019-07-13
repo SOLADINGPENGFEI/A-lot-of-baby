@@ -12,7 +12,8 @@
     "pages/CustomerService/main",
     "pages/realname/main",
     "pages/newaddress/main",
-    "pages/shareCanvas/main"
+    "pages/shareCanvas/main",
+    "pages/share/main"
    
   ],
   "window": {

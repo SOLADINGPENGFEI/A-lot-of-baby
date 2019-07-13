@@ -46,7 +46,7 @@ export default {
     
   },
   mounted(){
-    console.log('getswipe...',this.getswipe)
+    // console.log('getswipe...',this.getswipe)
   }
 };
 </script>

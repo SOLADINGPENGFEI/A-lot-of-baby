@@ -14,11 +14,10 @@
             </div>
             <div class="receiving">
                 <picker mode="region" 
-                        @change="changeRegin" 
-                        
-                        >
-                    <view>
-                        <input class="pikers"  v-model="region" placeholder="所在地区"/>
+                        @change="changeRegin">
+                    <view class="interviewAddress">
+                        {{region}}
+                        <!-- <input class="pikers"  v-model="region" placeholder="所在地区"/> -->
                     </view>
                 </picker>
                 <image src="/static/images/lt.svg" />
@@ -55,7 +54,7 @@ export default {
     },
     data(){
         return {
-           region: null,
+           region: '选择地址',
            tags: ['家','公司','学校','其它'],
            ind: null,
            checked: false
@@ -183,11 +182,12 @@ export default {
                     display: flex;
                     align-items:center;
                     justify-content: space-between;
-                    .pikers {
+                   .interviewAddress {
+                        padding-left:5px;
+                        width: 100%;
                         height: 100%;
-                        flex: 1;
-                        margin-left: 20px;
-                    }
+                        color: #9ca0a5;
+                   }
                 }
                 input {
                     flex:1;

@@ -87,20 +87,22 @@ export default {
                     rh = res.height/220*260
                     ry = (res.height - rh) / 2
                 }
-                context.drawImage(this.dapaiDetailData.mainImgUrl,0,0,res.width,res.height,0,80,160,200)
+                context.drawImage(this.dapaiDetailData.mainImgUrl,0,0,res.width,res.height,12,80,160,200)
                 context.draw(true, () => {
                     // 生成图片
                     wx.canvasToTempFilePath({
                         canvasId: 'firstCanvas',
                         quality: 1,
-                        y: 100,
+                        destWidth: 300,
+                        destHeight: 500,
                         fileType: 'jpg',
                         complete: res => {
                             console.log('tmpFile-res...',res)
                             // 预览
-                            // wx.previewImage({
-                            //     urls: [res.tempFilePath]
-                            // })
+                            wx.previewImage({
+                                urls: [res.tempFilePath]
+                            })
+                           
                         }
                     })
                 })

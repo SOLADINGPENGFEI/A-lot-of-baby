@@ -74,8 +74,8 @@ export default {
         }),
         changeRegin(e) {
             const {code,value} = e.mp.detail
-            console.log(code)
-            console.log(e.target.value)
+            // console.log(code)
+            // console.log(e.target.value)
             this.region = e.target.value
             this.current.provinceId = code[0]
             this.current.cityId = code[1]

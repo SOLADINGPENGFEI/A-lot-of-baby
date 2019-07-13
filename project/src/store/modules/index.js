@@ -17,7 +17,11 @@ const state = {
     },
     orderStatus: 1,
     list: [],
-    userData: {},
+    userData: {
+        headUrl: '',
+        nickName: '***',
+        inviteCode: '******'
+    },
     realname: {
         id_img_positive: '',
         id_img_opposite: '',
@@ -48,7 +52,7 @@ const actions = {
                 item.createTime = formatTime(item.createTime)
             })
 
-            commit('updateOrderData',{list:{...state.list,...result},index:state.orderStatus})
+            commit('updateOrderData',{list:{...result},index:state.orderStatus})
 
             resolve()
         })
@@ -86,7 +90,7 @@ const mutations = {
     },
     // 获取用户数据
     updateUser(state, payload) {
-        state.userData = payload.userData
+        payload?state.userData = payload.userData : state.userData
     },
     //实名认证
     updateRealname(state, payload) {

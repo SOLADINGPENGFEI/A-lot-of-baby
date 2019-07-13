@@ -2,14 +2,6 @@
    <div class="egg">
        <div class="header">
             <img :class="[id==180?'img_big':'img_small']" :src="dapaiData.specialImg" alt="" />
-            
-            <!-- <scroll-view  scroll-x="true" style="width: 100%" class="naveType">
-              <h2 
-              v-for="(item,index) in dapaiData.anchors" 
-              :class="{active:index==navTypeIndex}"
-              :key="index"
-              @click="click(index)">{{item.anchorDesc}}</h2>
-            </scroll-view> -->
             <h2>{{dapaiData.anchors[0].anchorDesc}}</h2>
          <div class="title">
            <p>

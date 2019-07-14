@@ -38,7 +38,7 @@ import { mapActions, mapState } from "vuex";
 export default {
   data() {
     return {
-      pageIndex:2
+      pageIndex:1
     };
   },
 

@@ -11,7 +11,7 @@ const state = {
 const actions ={
       async getloading({commit},params){
         let data = await loading(params);
-        console.log(data)
+        // console.log(data)
         //传递数据和页数   params-->页数
         commit('getload',{res:data.result,params})
       }

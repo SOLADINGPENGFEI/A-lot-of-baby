@@ -38,7 +38,7 @@ import { mapActions, mapState } from "vuex";
 export default {
   data() {
     return {
-      pageIndex:1
+      pageIndex:2
     };
   },
 
@@ -59,7 +59,7 @@ export default {
   },
 
     onReachBottom () {//上拉加载
-        this.pageIndex = this.pageIndex+1;
+        this.pageIndex = this.pageIndex + 1;
         if(this.pageIndex > 4){
            console.log('我是底线的')
         }else{
